@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Granite Point Advisory — M1 Color Variants</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Inter', system-ui, sans-serif; background: #E8EAED; padding: 48px 5%; }
+
+    .page-title { text-align: center; font-size: 1.4rem; font-weight: 800; color: #1E2433; letter-spacing: -0.04em; margin-bottom: 0.4rem; }
+    .page-sub { text-align: center; font-size: 0.88rem; color: #8A919E; margin-bottom: 3rem; }
+
+    .palette-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .palette-wrap { border-radius: 18px; overflow: hidden; box-shadow: 0 4px 24px rgba(0,0,0,0.08), 0 1px 3px rgba(0,0,0,0.04); }
+
+    .palette-label {
+      padding: 12px 18px;
+      font-size: 0.75rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+      background: #2A2F3A; color: #fff;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .palette-label span { font-weight: 400; opacity: 0.45; font-size: 0.7rem; letter-spacing: 0; text-transform: none; }
+
+    /* ── shared structure (identical layout for every card) ── */
+    .m-nav { background: #fff; border-bottom: 1px solid #E6E8EC; padding: 11px 18px; display: flex; align-items: center; justify-content: space-between; }
+    .m-logo { font-size: 0.82rem; font-weight: 800; letter-spacing: -0.04em; }
+    .m-nav-links { display: flex; gap: 12px; align-items: center; }
+    .m-nav-link { font-size: 0.62rem; font-weight: 500; }
+
+    .m-hero { background: #fff; padding: 28px 18px 24px; border-bottom: 1px solid #E6E8EC; }
+    .m-eyebrow { display: inline-block; font-size: 0.58rem; font-weight: 600; letter-spacing: 0.09em; text-transform: uppercase; padding: 3px 9px; border-radius: 20px; margin-bottom: 11px; }
+    .m-h1 { font-size: 1.3rem; font-weight: 800; letter-spacing: -0.04em; line-height: 1.1; margin-bottom: 8px; }
+    .m-sub { font-size: 0.67rem; line-height: 1.65; margin-bottom: 15px; max-width: 290px; }
+    .m-btns { display: flex; gap: 7px; }
+    .m-btn-p { font-size: 0.63rem; font-weight: 700; padding: 6px 13px; border-radius: 7px; color: #fff; }
+    .m-btn-g { font-size: 0.63rem; font-weight: 600; padding: 5px 13px; border-radius: 7px; border: 1.5px solid #DDE1E8; color: #7A8494; }
+
+    .m-metrics { padding: 13px 18px; display: flex; }
+    .m-metric { flex: 1; text-align: center; }
+    .m-metric-val { font-size: 0.95rem; font-weight: 800; color: #fff; letter-spacing: -0.04em; }
+    .m-metric-val em { font-style: normal; opacity: 0.55; }
+    .m-metric-lbl { font-size: 0.52rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; margin-top: 2px; color: rgba(255,255,255,0.38); }
+
+    .m-cards-sec { padding: 20px 18px; }
+    .m-sec-lbl { font-size: 0.56rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 3px; }
+    .m-sec-title { font-size: 0.95rem; font-weight: 800; letter-spacing: -0.03em; margin-bottom: 13px; }
+    .m-cards { display: flex; gap: 8px; }
+    .m-card { flex: 1; border-radius: 9px; padding: 11px; border: 1px solid #E6E8EC; background: #fff; }
+    .m-card-icon { width: 26px; height: 26px; border-radius: 7px; display: flex; align-items: center; justify-content: center; margin-bottom: 7px; }
+    .m-card-icon svg { width: 13px; height: 13px; stroke-width: 1.75; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+    .m-card h4 { font-size: 0.67rem; font-weight: 700; margin-bottom: 3px; }
+    .m-card p { font-size: 0.58rem; line-height: 1.5; color: #8A919E; }
+
+    .m-cta { padding: 15px 18px; display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+    .m-cta-text h3 { font-size: 0.82rem; font-weight: 800; letter-spacing: -0.03em; margin-bottom: 2px; color: #fff; }
+    .m-cta-text p { font-size: 0.58rem; color: rgba(255,255,255,0.5); }
+    .m-cta-btn { font-size: 0.63rem; font-weight: 700; padding: 7px 13px; border-radius: 7px; white-space: nowrap; }
+
+    .m-footer { padding: 14px 18px; }
+    .m-footer-logo { font-size: 0.78rem; font-weight: 800; letter-spacing: -0.04em; color: #fff; margin-bottom: 6px; }
+    .m-footer-links { display: flex; gap: 11px; margin-bottom: 7px; }
+    .m-footer-link { font-size: 0.56rem; color: rgba(255,255,255,0.35); }
+    .m-footer-copy { font-size: 0.52rem; color: rgba(255,255,255,0.18); }
+
+    .swatch-row { display: flex; gap: 6px; padding: 10px 15px; background: rgba(0,0,0,0.025); border-top: 1px solid rgba(0,0,0,0.055); align-items: center; }
+    .swatch { width: 20px; height: 20px; border-radius: 50%; border: 1.5px solid rgba(0,0,0,0.08); flex-shrink: 0; }
+    .swatch-label { font-size: 0.57rem; color: #9CA3AF; font-family: monospace; margin-left: 3px; }
+
+    /* card section alt backgrounds */
+    .bg-alt-blue   { background: #F4F6FA; }
+    .bg-alt-teal   { background: #F2F7F6; }
+    .bg-alt-sage   { background: #F4F6F3; }
+    .bg-alt-rust   { background: #F7F4F2; }
+    .bg-alt-indigo { background: #F4F4F8; }
+  </style>
+</head>
+<body>
+
+<h1 class="page-title">M1 — Accent Color Variations</h1>
+<p class="page-sub">Same clean white layout, five different accent colors. Pick your favorite.</p>
+
+<div class="palette-row">
+
+
+  <!-- ══ V1: Original Slate Blue (reference) ══ -->
+  <div class="palette-wrap">
+    <div class="palette-label">V1 — Slate Blue <span>Original M1 reference</span></div>
+
+    <div class="m-nav">
+      <div class="m-logo" style="color:#1E2B3C;">Granite Point <span style="color:#5272A0;">Advisory</span></div>
+      <div class="m-nav-links">
+        <span class="m-nav-link" style="color:#6B7A8D;">Services</span>
+        <span class="m-nav-link" style="color:#6B7A8D;">About</span>
+        <span class="m-nav-link" style="color:#6B7A8D;">Pricing</span>
+        <span class="m-nav-link" style="background:#5272A0;color:#fff;padding:5px 11px;border-radius:6px;">Book a Call</span>
+      </div>
+    </div>
+    <div class="m-hero">
+      <div class="m-eyebrow" style="color:#5272A0;background:#EBF0F7;">Bookkeeping · CFO · Payroll</div>
+      <div class="m-h1" style="color:#1E2B3C;">Financial Clarity for<br><span style="color:#5272A0;">Growing Businesses</span></div>
+      <div class="m-sub" style="color:#6B7A8D;">Expert financial leadership — without the full-time hire.</div>
+      <div class="m-btns">
+        <div class="m-btn-p" style="background:#5272A0;">Book a Free Consultation</div>
+        <div class="m-btn-g">See Our Services</div>
+      </div>
+    </div>
+    <div class="m-metrics" style="background:#2C3E58;">
+      <div class="m-metric"><div class="m-metric-val">50<em>+</em></div><div class="m-metric-lbl">Clients</div></div>
+      <div class="m-metric"><div class="m-metric-val">8<em>+</em></div><div class="m-metric-lbl">Years</div></div>
+      <div class="m-metric"><div class="m-metric-val">$<em>25M+</em></div><div class="m-metric-lbl">Managed</div></div>
+      <div class="m-metric"><div class="m-metric-val" style="font-size:0.78rem;">QB<em> Pro</em></div><div class="m-metric-lbl">Certified</div></div>
+    </div>
+    <div class="m-cards-sec bg-alt-blue">
+      <div class="m-sec-lbl" style="color:#5272A0;">What We Do</div>
+      <div class="m-sec-title" style="color:#1E2B3C;">Services Built Around You</div>
+      <div class="m-cards">
+        <div class="m-card"><div class="m-card-icon" style="background:#EBF0F7;"><svg viewBox="0 0 24 24" style="stroke:#5272A0;"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div><h4 style="color:#1E2B3C;">Bookkeeping</h4><p>Accurate books, every month.</p></div>
+        <div class="m-card"><div class="m-card-icon" style="background:#EBF0F7;"><svg viewBox="0 0 24 24" style="stroke:#5272A0;"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div><h4 style="color:#1E2B3C;">Fractional CFO</h4><p>Strategic leadership.</p></div>
+        <div class="m-card"><div class="m-card-icon" style="background:#EBF0F7;"><svg viewBox="0 0 24 24" style="stroke:#5272A0;"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div><h4 style="color:#1E2B3C;">Payroll</h4><p>Reliable &amp; compliant.</p></div>
+      </div>
+    </div>
+    <div class="m-cta" style="background:#2C3E58;">
+      <div class="m-cta-text"><h3>Sounds like a fit?</h3><p>Free 30-min call — no pressure.</p></div>
+      <div class="m-cta-btn" style="background:#5272A0;color:#fff;">Book a Free Call →</div>
+    </div>
+    <div class="m-footer" style="background:#2C3E58;">
+      <div class="m-footer-logo">Granite Point <span style="color:#9DB8D8;">Advisory</span></div>
+      <div class="m-footer-links"><span class="m-footer-link">Services</span><span class="m-footer-link">About</span><span class="m-footer-link">Pricing</span><span class="m-footer-link">FAQ</span></div>
+      <div class="m-footer-copy">© 2026 Granite Point Advisory.</div>
+    </div>
+    <div class="swatch-row">
+      <div class="swatch" style="background:#fff;"></div>
+      <div class="swatch" style="background:#F4F6FA;"></div>
+      <div class="swatch" style="background:#2C3E58;"></div>
+      <div class="swatch" style="background:#5272A0;"></div>
+      <div class="swatch-label">#fff · #F4F6FA · #2C3E58 · #5272A0</div>
+    </div>
+  </div>
+
+
+  <!-- ══ V2: Muted Teal ══ -->
+  <div class="palette-wrap">
+    <div class="palette-label">V2 — Muted Teal <span>Fresh, calm, modern</span></div>
+
+    <div class="m-nav">
+      <div class="m-logo" style="color:#1A2C2C;">Granite Point <span style="color:#3D7A7A;">Advisory</span></div>
+      <div class="m-nav-links">
+        <span class="m-nav-link" style="color:#607070;">Services</span>
+        <span class="m-nav-link" style="color:#607070;">About</span>
+        <span class="m-nav-link" style="color:#607070;">Pricing</span>
+        <span class="m-nav-link" style="background:#3D7A7A;color:#fff;padding:5px 11px;border-radius:6px;">Book a Call</span>
+      </div>
+    </div>
+    <div class="m-hero">
+      <div class="m-eyebrow" style="color:#3D7A7A;background:#E8F4F4;">Bookkeeping · CFO · Payroll</div>
+      <div class="m-h1" style="color:#1A2C2C;">Financial Clarity for<br><span style="color:#3D7A7A;">Growing Businesses</span></div>
+      <div class="m-sub" style="color:#607070;">Expert financial leadership — without the full-time hire.</div>
+      <div class="m-btns">
+        <div class="m-btn-p" style="background:#3D7A7A;">Book a Free Consultation</div>
+        <div class="m-btn-g">See Our Services</div>
+      </div>
+    </div>
+    <div class="m-metrics" style="background:#1E3838;">
+      <div class="m-metric"><div class="m-metric-val">50<em>+</em></div><div class="m-metric-lbl">Clients</div></div>
+      <div class="m-metric"><div class="m-metric-val">8<em>+</em></div><div class="m-metric-lbl">Years</div></div>
+      <div class="m-metric"><div class="m-metric-val">$<em>25M+</em></div><div class="m-metric-lbl">Managed</div></div>
+      <div class="m-metric"><div class="m-metric-val" style="font-size:0.78rem;">QB<em> Pro</em></div><div class="m-metric-lbl">Certified</div></div>
+    </div>
+    <div class="m-cards-sec bg-alt-teal">
+      <div class="m-sec-lbl" style="color:#3D7A7A;">What We Do</div>
+      <div class="m-sec-title" style="color:#1A2C2C;">Services Built Around You</div>
+      <div class="m-cards">
+        <div class="m-card"><div class="m-card-icon" style="background:#E8F4F4;"><svg viewBox="0 0 24 24" style="stroke:#3D7A7A;"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div><h4 style="color:#1A2C2C;">Bookkeeping</h4><p>Accurate books, every month.</p></div>
+        <div class="m-card"><div class="m-card-icon" style="background:#E8F4F4;"><svg viewBox="0 0 24 24" style="stroke:#3D7A7A;"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div><h4 style="color:#1A2C2C;">Fractional CFO</h4><p>Strategic leadership.</p></div>
+        <div class="m-card"><div class="m-card-icon" style="background:#E8F4F4;"><svg viewBox="0 0 24 24" style="stroke:#3D7A7A;"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div><h4 style="color:#1A2C2C;">Payroll</h4><p>Reliable &amp; compliant.</p></div>
+      </div>
+    </div>
+    <div class="m-cta" style="background:#1E3838;">
+      <div class="m-cta-text"><h3>Sounds like a fit?</h3><p>Free 30-min call — no pressure.</p></div>
+      <div class="m-cta-btn" style="background:#3D7A7A;color:#fff;">Book a Free Call →</div>
+    </div>
+    <div class="m-footer" style="background:#1E3838;">
+      <div class="m-footer-logo">Granite Point <span style="color:#7AB8B8;">Advisory</span></div>
+      <div class="m-footer-links"><span class="m-footer-link">Services</span><span class="m-footer-link">About</span><span class="m-footer-link">Pricing</span><span class="m-footer-link">FAQ</span></div>
+      <div class="m-footer-copy">© 2026 Granite Point Advisory.</div>
+    </div>
+    <div class="swatch-row">
+      <div class="swatch" style="background:#fff;"></div>
+      <div class="swatch" style="background:#F2F7F6;"></div>
+      <div class="swatch" style="background:#1E3838;"></div>
+      <div class="swatch" style="background:#3D7A7A;"></div>
+      <div class="swatch-label">#fff · #F2F7F6 · #1E3838 · #3D7A7A</div>
+    </div>
+  </div>
+
+
+  <!-- ══ V3: Sage Green ══ -->
+  <div class="palette-wrap">
+    <div class="palette-label">V3 — Sage Green <span>Grounded, trustworthy</span></div>
+
+    <div class="m-nav">
+      <div class="m-logo" style="color:#1C2A20;">Granite Point <span style="color:#4A7058;">Advisory</span></div>
+      <div class="m-nav-links">
+        <span class="m-nav-link" style="color:#607060;">Services</span>
+        <span class="m-nav-link" style="color:#607060;">About</span>
+        <span class="m-nav-link" style="color:#607060;">Pricing</span>
+        <span class="m-nav-link" style="background:#4A7058;color:#fff;padding:5px 11px;border-radius:6px;">Book a Call</span>
+      </div>
+    </div>
+    <div class="m-hero">
+      <div class="m-eyebrow" style="color:#4A7058;background:#EAF2EC;">Bookkeeping · CFO · Payroll</div>
+      <div class="m-h1" style="color:#1C2A20;">Financial Clarity for<br><span style="color:#4A7058;">Growing Businesses</span></div>
+      <div class="m-sub" style="color:#607060;">Expert financial leadership — without the full-time hire.</div>
+      <div class="m-btns">
+        <div class="m-btn-p" style="background:#4A7058;">Book a Free Consultation</div>
+        <div class="m-btn-g">See Our Services</div>
+      </div>
+    </div>
+    <div class="m-metrics" style="background:#1E3028;">
+      <div class="m-metric"><div class="m-metric-val">50<em>+</em></div><div class="m-metric-lbl">Clients</div></div>
+      <div class="m-metric"><div class="m-metric-val">8<em>+</em></div><div class="m-metric-lbl">Years</div></div>
+      <div class="m-metric"><div class="m-metric-val">$<em>25M+</em></div><div class="m-metric-lbl">Managed</div></div>
+      <div class="m-metric"><div class="m-metric-val" style="font-size:0.78rem;">QB<em> Pro</em></div><div class="m-metric-lbl">Certified</div></div>
+    </div>
+    <div class="m-cards-sec bg-alt-sage">
+      <div class="m-sec-lbl" style="color:#4A7058;">What We Do</div>
+      <div class="m-sec-title" style="color:#1C2A20;">Services Built Around You</div>
+      <div class="m-cards">
+        <div class="m-card"><div class="m-card-icon" style="background:#EAF2EC;"><svg viewBox="0 0 24 24" style="stroke:#4A7058;"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div><h4 style="color:#1C2A20;">Bookkeeping</h4><p>Accurate books, every month.</p></div>
+        <div class="m-card"><div class="m-card-icon" style="background:#EAF2EC;"><svg viewBox="0 0 24 24" style="stroke:#4A7058;"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div><h4 style="color:#1C2A20;">Fractional CFO</h4><p>Strategic leadership.</p></div>
+        <div class="m-card"><div class="m-card-icon" style="background:#EAF2EC;"><svg viewBox="0 0 24 24" style="stroke:#4A7058;"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div><h4 style="color:#1C2A20;">Payroll</h4><p>Reliable &amp; compliant.</p></div>
+      </div>
+    </div>
+    <div class="m-cta" style="background:#1E3028;">
+      <div class="m-cta-text"><h3>Sounds like a fit?</h3><p>Free 30-min call — no pressure.</p></div>
+      <div class="m-cta-btn" style="background:#4A7058;color:#fff;">Book a Free Call →</div>
+    </div>
+    <div class="m-footer" style="background:#1E3028;">
+      <div class="m-footer-logo">Granite Point <span style="color:#7AAE8A;">Advisory</span></div>
+      <div class="m-footer-links"><span class="m-footer-link">Services</span><span class="m-footer-link">About</span><span class="m-footer-link">Pricing</span><span class="m-footer-link">FAQ</span></div>
+      <div class="m-footer-copy">© 2026 Granite Point Advisory.</div>
+    </div>
+    <div class="swatch-row">
+      <div class="swatch" style="background:#fff;"></div>
+      <div class="swatch" style="background:#F4F6F3;"></div>
+      <div class="swatch" style="background:#1E3028;"></div>
+      <div class="swatch" style="background:#4A7058;"></div>
+      <div class="swatch-label">#fff · #F4F6F3 · #1E3028 · #4A7058</div>
+    </div>
+  </div>
+
+
+  <!-- ══ V4: Warm Rust ══ -->
+  <div class="palette-wrap">
+    <div class="palette-label">V4 — Warm Rust <span>Distinctive, warm, confident</span></div>
+
+    <div class="m-nav">
+      <div class="m-logo" style="color:#261C18;">Granite Point <span style="color:#7A4E3E;">Advisory</span></div>
+      <div class="m-nav-links">
+        <span class="m-nav-link" style="color:#705850;">Services</span>
+        <span class="m-nav-link" style="color:#705850;">About</span>
+        <span class="m-nav-link" style="color:#705850;">Pricing</span>
+        <span class="m-nav-link" style="background:#7A4E3E;color:#fff;padding:5px 11px;border-radius:6px;">Book a Call</span>
+      </div>
+    </div>
+    <div class="m-hero">
+      <div class="m-eyebrow" style="color:#7A4E3E;background:#F5EDE9;">Bookkeeping · CFO · Payroll</div>
+      <div class="m-h1" style="color:#261C18;">Financial Clarity for<br><span style="color:#7A4E3E;">Growing Businesses</span></div>
+      <div class="m-sub" style="color:#705850;">Expert financial leadership — without the full-time hire.</div>
+      <div class="m-btns">
+        <div class="m-btn-p" style="background:#7A4E3E;">Book a Free Consultation</div>
+        <div class="m-btn-g">See Our Services</div>
+      </div>
+    </div>
+    <div class="m-metrics" style="background:#2C1E18;">
+      <div class="m-metric"><div class="m-metric-val">50<em>+</em></div><div class="m-metric-lbl">Clients</div></div>
+      <div class="m-metric"><div class="m-metric-val">8<em>+</em></div><div class="m-metric-lbl">Years</div></div>
+      <div class="m-metric"><div class="m-metric-val">$<em>25M+</em></div><div class="m-metric-lbl">Managed</div></div>
+      <div class="m-metric"><div class="m-metric-val" style="font-size:0.78rem;">QB<em> Pro</em></div><div class="m-metric-lbl">Certified</div></div>
+    </div>
+    <div class="m-cards-sec bg-alt-rust">
+      <div class="m-sec-lbl" style="color:#7A4E3E;">What We Do</div>
+      <div class="m-sec-title" style="color:#261C18;">Services Built Around You</div>
+      <div class="m-cards">
+        <div class="m-card"><div class="m-card-icon" style="background:#F5EDE9;"><svg viewBox="0 0 24 24" style="stroke:#7A4E3E;"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div><h4 style="color:#261C18;">Bookkeeping</h4><p>Accurate books, every month.</p></div>
+        <div class="m-card"><div class="m-card-icon" style="background:#F5EDE9;"><svg viewBox="0 0 24 24" style="stroke:#7A4E3E;"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div><h4 style="color:#261C18;">Fractional CFO</h4><p>Strategic leadership.</p></div>
+        <div class="m-card"><div class="m-card-icon" style="background:#F5EDE9;"><svg viewBox="0 0 24 24" style="stroke:#7A4E3E;"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div><h4 style="color:#261C18;">Payroll</h4><p>Reliable &amp; compliant.</p></div>
+      </div>
+    </div>
+    <div class="m-cta" style="background:#2C1E18;">
+      <div class="m-cta-text"><h3>Sounds like a fit?</h3><p>Free 30-min call — no pressure.</p></div>
+      <div class="m-cta-btn" style="background:#7A4E3E;color:#fff;">Book a Free Call →</div>
+    </div>
+    <div class="m-footer" style="background:#2C1E18;">
+      <div class="m-footer-logo">Granite Point <span style="color:#B8887A;">Advisory</span></div>
+      <div class="m-footer-links"><span class="m-footer-link">Services</span><span class="m-footer-link">About</span><span class="m-footer-link">Pricing</span><span class="m-footer-link">FAQ</span></div>
+      <div class="m-footer-copy">© 2026 Granite Point Advisory.</div>
+    </div>
+    <div class="swatch-row">
+      <div class="swatch" style="background:#fff;"></div>
+      <div class="swatch" style="background:#F7F4F2;"></div>
+      <div class="swatch" style="background:#2C1E18;"></div>
+      <div class="swatch" style="background:#7A4E3E;"></div>
+      <div class="swatch-label">#fff · #F7F4F2 · #2C1E18 · #7A4E3E</div>
+    </div>
+  </div>
+
+
+  <!-- ══ V5: Dusty Indigo ══ -->
+  <div class="palette-wrap">
+    <div class="palette-label">V5 — Dusty Indigo <span>Calm, refined, distinctive</span></div>
+
+    <div class="m-nav">
+      <div class="m-logo" style="color:#1E1E30;">Granite Point <span style="color:#5A5890;">Advisory</span></div>
+      <div class="m-nav-links">
+        <span class="m-nav-link" style="color:#686880;">Services</span>
+        <span class="m-nav-link" style="color:#686880;">About</span>
+        <span class="m-nav-link" style="color:#686880;">Pricing</span>
+        <span class="m-nav-link" style="background:#5A5890;color:#fff;padding:5px 11px;border-radius:6px;">Book a Call</span>
+      </div>
+    </div>
+    <div class="m-hero">
+      <div class="m-eyebrow" style="color:#5A5890;background:#EEEEF6;">Bookkeeping · CFO · Payroll</div>
+      <div class="m-h1" style="color:#1E1E30;">Financial Clarity for<br><span style="color:#5A5890;">Growing Businesses</span></div>
+      <div class="m-sub" style="color:#686880;">Expert financial leadership — without the full-time hire.</div>
+      <div class="m-btns">
+        <div class="m-btn-p" style="background:#5A5890;">Book a Free Consultation</div>
+        <div class="m-btn-g">See Our Services</div>
+      </div>
+    </div>
+    <div class="m-metrics" style="background:#22203A;">
+      <div class="m-metric"><div class="m-metric-val">50<em>+</em></div><div class="m-metric-lbl">Clients</div></div>
+      <div class="m-metric"><div class="m-metric-val">8<em>+</em></div><div class="m-metric-lbl">Years</div></div>
+      <div class="m-metric"><div class="m-metric-val">$<em>25M+</em></div><div class="m-metric-lbl">Managed</div></div>
+      <div class="m-metric"><div class="m-metric-val" style="font-size:0.78rem;">QB<em> Pro</em></div><div class="m-metric-lbl">Certified</div></div>
+    </div>
+    <div class="m-cards-sec bg-alt-indigo">
+      <div class="m-sec-lbl" style="color:#5A5890;">What We Do</div>
+      <div class="m-sec-title" style="color:#1E1E30;">Services Built Around You</div>
+      <div class="m-cards">
+        <div class="m-card"><div class="m-card-icon" style="background:#EEEEF6;"><svg viewBox="0 0 24 24" style="stroke:#5A5890;"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div><h4 style="color:#1E1E30;">Bookkeeping</h4><p>Accurate books, every month.</p></div>
+        <div class="m-card"><div class="m-card-icon" style="background:#EEEEF6;"><svg viewBox="0 0 24 24" style="stroke:#5A5890;"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div><h4 style="color:#1E1E30;">Fractional CFO</h4><p>Strategic leadership.</p></div>
+        <div class="m-card"><div class="m-card-icon" style="background:#EEEEF6;"><svg viewBox="0 0 24 24" style="stroke:#5A5890;"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div><h4 style="color:#1E1E30;">Payroll</h4><p>Reliable &amp; compliant.</p></div>
+      </div>
+    </div>
+    <div class="m-cta" style="background:#22203A;">
+      <div class="m-cta-text"><h3>Sounds like a fit?</h3><p>Free 30-min call — no pressure.</p></div>
+      <div class="m-cta-btn" style="background:#5A5890;color:#fff;">Book a Free Call →</div>
+    </div>
+    <div class="m-footer" style="background:#22203A;">
+      <div class="m-footer-logo">Granite Point <span style="color:#9A98C8;">Advisory</span></div>
+      <div class="m-footer-links"><span class="m-footer-link">Services</span><span class="m-footer-link">About</span><span class="m-footer-link">Pricing</span><span class="m-footer-link">FAQ</span></div>
+      <div class="m-footer-copy">© 2026 Granite Point Advisory.</div>
+    </div>
+    <div class="swatch-row">
+      <div class="swatch" style="background:#fff;"></div>
+      <div class="swatch" style="background:#F4F4F8;"></div>
+      <div class="swatch" style="background:#22203A;"></div>
+      <div class="swatch" style="background:#5A5890;"></div>
+      <div class="swatch-label">#fff · #F4F4F8 · #22203A · #5A5890</div>
+    </div>
+  </div>
+
+
+</div>
+
+<p style="text-align:center;margin-top:2.5rem;font-size:0.82rem;color:#9CA3AF;">Pick V1–V5 and I'll apply it to the full site.</p>
+
+</body>
+</html>

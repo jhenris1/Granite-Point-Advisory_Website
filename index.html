@@ -1,0 +1,1632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <title>Fractional CFO & Financial Operations | Granite Point Advisory</title>
+  <meta name="description" content="Granite Point Advisory provides fractional CFO services, bookkeeping, and payroll for serious business owners. Operational insight, clear financials, flat-rate pricing." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://granitepointadvisory.com/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Granite Point Advisory | Fractional CFO & Financial Operations" />
+  <meta property="og:description" content="Fractional CFO services, bookkeeping, and payroll for serious business owners. Operational insight and strategic thinking at every stage." />
+  <meta property="og:url" content="https://granitepointadvisory.com/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Fractional CFO & Financial Operations | Granite Point Advisory" />
+  <meta name="twitter:description" content="Bookkeeping, fractional CFO, and payroll for serious business owners. Flat-rate pricing, no surprises." />
+  <meta name="theme-color" content="#ffffff" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AccountingService",
+    "name": "Granite Point Advisory",
+    "description": "Fractional CFO services, bookkeeping, and payroll for business owners.",
+    "url": "https://granitepointadvisory.com",
+    "telephone": "516-662-4527",
+    "email": "jason@granitepointadvisory.com",
+    "areaServed": { "@type": "Country", "name": "United States" },
+    "priceRange": "$$",
+    "serviceType": ["Bookkeeping", "Fractional CFO", "Payroll"]
+  }
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="dns-prefetch" href="//assets.calendly.com" />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&family=Inter:wght@400;500;600;700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&family=Inter:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&family=Inter:wght@400;500;600;700&display=swap" /></noscript>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:        #EEF1F8;   /* light blue-gray page bg */
+      --bg-alt:    #F4F7FC;   /* near-white alt sections */
+      --card:      #DCEAF8;   /* Ridgeline-style blue card bg */
+      --white:     #FFFFFF;
+      --ink:       #1A2E48;   /* footer & CTA strip dark */
+      --dark:      #1A2540;   /* headings */
+      --text:      #3D5068;   /* body text */
+      --muted:     #6E80A0;   /* labels, captions */
+      --border:    #C8D8EE;
+      --border-lt: #DDE6F4;
+      --navy:      #1C3F5C;   /* CTA buttons */
+      --navy-dk:   #152E44;   /* hover */
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    /* ── NAV ── */
+    body > nav {
+      position: sticky;
+      top: 0;
+      z-index: 200;
+      height: 68px;
+      background: var(--white);
+      border-bottom: 1px solid var(--border-lt);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 6%;
+    }
+
+    .nav-logo {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--dark);
+      letter-spacing: -0.01em;
+      flex-shrink: 0;
+    }
+
+    .nav-logo em { font-style: italic; color: var(--navy); }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--muted);
+      letter-spacing: -0.01em;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--dark); }
+
+    .nav-cta {
+      background: var(--navy) !important;
+      color: var(--white) !important;
+      padding: 0.5rem 1.35rem !important;
+      border-radius: 40px !important;
+      font-weight: 600 !important;
+      font-size: 0.875rem !important;
+      transition: background 0.2s !important;
+      letter-spacing: 0 !important;
+    }
+
+    .nav-cta:hover { background: var(--navy-dk) !important; color: var(--white) !important; }
+
+    /* Hamburger */
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 6px;
+      z-index: 210;
+    }
+
+    .nav-hamburger span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--dark);
+      border-radius: 2px;
+      transition: transform 0.25s, opacity 0.25s;
+    }
+
+    .nav-hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+    .nav-hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+    .nav-hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+    /* ── SHARED ── */
+    section { padding: 100px 6%; }
+
+    .section-eyebrow {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 0.85rem;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(1.5rem, 3vw, 2.1rem);
+      font-weight: 700;
+      color: var(--dark);
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.1rem;
+    }
+
+    .section-sub {
+      font-size: 1rem;
+      color: var(--muted);
+      max-width: 560px;
+      line-height: 1.8;
+      margin-bottom: 3.5rem;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      background: var(--bg);
+      padding: 84px 6% 72px;
+    }
+
+    .hero-inner { max-width: 720px; }
+
+    .hero-eyebrow {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(1.75rem, 3.8vw, 2.7rem);
+      font-weight: 700;
+      line-height: 1.13;
+      letter-spacing: -0.025em;
+      color: var(--dark);
+      margin-bottom: 1.1rem;
+    }
+
+    .hero-sub {
+      font-size: 1rem;
+      color: var(--text);
+      max-width: 500px;
+      margin-bottom: 2rem;
+      line-height: 1.78;
+    }
+
+    .hero-btns { display: flex; gap: 0.875rem; flex-wrap: wrap; }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.78rem 1.75rem;
+      border-radius: 40px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      background: var(--navy);
+      color: var(--white);
+      transition: background 0.2s, transform 0.2s;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-primary:hover { background: var(--navy-dk); transform: translateY(-1px); }
+
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.75rem 1.75rem;
+      border-radius: 40px;
+      font-weight: 500;
+      font-size: 0.9rem;
+      background: transparent;
+      color: var(--text);
+      border: 1.5px solid var(--border);
+      transition: border-color 0.2s, color 0.2s;
+      cursor: pointer;
+    }
+
+    .btn-outline:hover { border-color: var(--navy); color: var(--navy); }
+
+    /* ── METRICS ── */
+    .metrics {
+      background: var(--white);
+      border-top: 1px solid var(--border-lt);
+      border-bottom: 1px solid var(--border-lt);
+    }
+
+    .metrics-inner {
+      display: flex;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .metric {
+      flex: 1;
+      text-align: center;
+      padding: 2.25rem 1rem;
+      border-right: 1px solid var(--border-lt);
+    }
+
+    .metric:last-child { border-right: none; }
+
+    .metric-val {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--dark);
+      letter-spacing: -0.04em;
+      line-height: 1;
+      margin-bottom: 0.4rem;
+    }
+
+    .metric-label {
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: var(--muted);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    /* ── SERVICES ── */
+    #services { background: var(--bg); }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .service-card {
+      background: var(--card);
+      border-radius: 16px;
+      padding: 2.25rem 2rem;
+      transition: transform 0.25s;
+    }
+
+    .service-card:hover { transform: translateY(-3px); }
+
+    .svc-icon {
+      width: 44px;
+      height: 44px;
+      background: var(--white);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.4rem;
+      box-shadow: 0 1px 6px rgba(28,63,92,0.09);
+    }
+
+    .svc-icon svg {
+      width: 19px;
+      height: 19px;
+      stroke: var(--navy);
+      stroke-width: 1.75;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      fill: none;
+    }
+
+    .service-card h3 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--dark);
+      letter-spacing: -0.02em;
+      margin-bottom: 0.5rem;
+      line-height: 1.25;
+    }
+
+    .svc-desc {
+      font-size: 0.875rem;
+      color: var(--text);
+      margin-bottom: 1.25rem;
+      line-height: 1.7;
+    }
+
+    .svc-list { list-style: none; display: flex; flex-direction: column; gap: 0.55rem; }
+
+    .svc-list li {
+      font-size: 0.875rem;
+      color: var(--text);
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+    }
+
+    .svc-list li::before {
+      content: '';
+      display: block;
+      width: 5px;
+      height: 5px;
+      background: var(--navy);
+      border-radius: 50%;
+      flex-shrink: 0;
+      margin-top: 0.52rem;
+      opacity: 0.45;
+    }
+
+    /* ── WHY US ── */
+    #why { background: var(--white); }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .why-card {
+      background: var(--bg-alt);
+      border: 1px solid var(--border-lt);
+      border-radius: 16px;
+      padding: 2.25rem 2rem;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .why-card:hover {
+      border-color: var(--border);
+      box-shadow: 0 6px 24px rgba(28,63,92,0.06);
+    }
+
+    .why-icon {
+      width: 44px;
+      height: 44px;
+      background: var(--card);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.25rem;
+    }
+
+    .why-icon svg {
+      width: 20px;
+      height: 20px;
+      stroke: var(--navy);
+      stroke-width: 1.75;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      fill: none;
+    }
+
+    .why-num {
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 0.55rem;
+    }
+
+    .why-card h4 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--dark);
+      letter-spacing: -0.015em;
+      margin-bottom: 0.55rem;
+      line-height: 1.3;
+    }
+
+    .why-card p { font-size: 0.875rem; color: var(--text); line-height: 1.75; }
+
+    /* ── CTA STRIP ── */
+    .cta-strip {
+      background: var(--ink);
+      padding: 88px 6%;
+    }
+
+    .cta-strip-inner {
+      max-width: 620px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .cta-strip-eyebrow {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.35);
+      margin-bottom: 1.25rem;
+    }
+
+    .cta-strip h2 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(1.4rem, 2.8vw, 1.9rem);
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: -0.022em;
+      line-height: 1.18;
+      margin-bottom: 1rem;
+    }
+
+    .cta-strip p {
+      font-size: 0.97rem;
+      color: rgba(255,255,255,0.48);
+      line-height: 1.78;
+      margin-bottom: 2.25rem;
+    }
+
+    .btn-light {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.8rem 2rem;
+      border-radius: 40px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      background: var(--white);
+      color: var(--navy);
+      transition: background 0.2s, transform 0.2s;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-light:hover { background: rgba(255,255,255,0.9); transform: translateY(-1px); }
+
+    /* ── ABOUT ── */
+    #about { background: var(--bg-alt); }
+
+    .about-wrap {
+      display: grid;
+      grid-template-columns: 340px 1fr;
+      gap: 5rem;
+      align-items: center;
+      max-width: 1040px;
+    }
+
+    .about-photo {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      border-radius: 18px;
+      overflow: hidden;
+      background: var(--card);
+      border: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+    }
+
+    .about-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
+    .photo-fallback {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      width: 100%;
+      height: 100%;
+    }
+    .photo-hint { font-size: 0.8rem; color: var(--muted); font-weight: 500; text-align: center; padding: 0 1rem; }
+
+    .about-text .section-title { margin-bottom: 1.25rem; }
+    .about-text p { font-size: 1rem; color: var(--text); line-height: 1.82; margin-bottom: 1rem; }
+    .about-text p strong { color: var(--dark); font-weight: 600; }
+
+    .creds { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 2rem; }
+
+    .cred {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.4rem 0.95rem;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 40px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--dark);
+    }
+
+    .cred svg {
+      width: 13px;
+      height: 13px;
+      stroke: var(--navy);
+      stroke-width: 2.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      fill: none;
+      flex-shrink: 0;
+    }
+
+    /* ── PROCESS ── */
+    #process { background: var(--white); }
+
+    .steps-row {
+      display: flex;
+      gap: 2.5rem;
+      align-items: flex-start;
+    }
+
+    .step { flex: 1; position: relative; }
+
+    @media (min-width: 641px) {
+      .step:not(:last-child)::after {
+        content: '';
+        position: absolute;
+        top: 20px;
+        left: 42px;
+        right: -2.5rem;
+        height: 1px;
+        background: var(--border);
+        pointer-events: none;
+      }
+    }
+
+    .step-num {
+      width: 40px;
+      height: 40px;
+      background: var(--card);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.875rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 1.25rem;
+      flex-shrink: 0;
+    }
+
+    .step h4 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--dark);
+      letter-spacing: -0.015em;
+      margin-bottom: 0.55rem;
+      line-height: 1.3;
+    }
+
+    .step p { font-size: 0.875rem; color: var(--text); line-height: 1.72; }
+
+    /* ── PRICING ── */
+    #pricing { background: var(--bg-alt); }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(265px, 1fr));
+      gap: 1.5rem;
+      max-width: 1000px;
+    }
+
+    .pricing-card {
+      background: var(--white);
+      border: 1px solid var(--border-lt);
+      border-radius: 18px;
+      padding: 2.25rem 2rem;
+      position: relative;
+      transition: box-shadow 0.2s;
+    }
+
+    .pricing-card:hover { box-shadow: 0 8px 32px rgba(28,63,92,0.08); }
+
+    .pricing-card.featured {
+      border-color: var(--navy);
+      box-shadow: 0 12px 40px rgba(28,63,92,0.11);
+    }
+
+    .p-badge {
+      position: absolute;
+      top: -12px;
+      left: 1.75rem;
+      background: var(--navy);
+      color: var(--white);
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      padding: 0.25rem 0.8rem;
+      border-radius: 40px;
+    }
+
+    .pricing-card h3 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--dark);
+      letter-spacing: -0.02em;
+      margin-bottom: 0.5rem;
+    }
+
+    .p-starting {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-top: 0.6rem;
+    }
+
+    .p-amount {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 2.1rem;
+      font-weight: 700;
+      color: var(--dark);
+      letter-spacing: -0.04em;
+      line-height: 1;
+      margin: 0.15rem 0 0.3rem;
+    }
+
+    .p-period { font-size: 0.875rem; color: var(--muted); font-weight: 500; }
+
+    .p-desc {
+      font-size: 0.875rem;
+      color: var(--text);
+      margin: 0.75rem 0 1.5rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border-lt);
+      line-height: 1.65;
+    }
+
+    .p-list { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+
+    .p-list li {
+      font-size: 0.875rem;
+      color: var(--text);
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+
+    .p-list li::before {
+      content: '✓';
+      color: var(--navy);
+      font-weight: 700;
+      font-size: 0.78rem;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .pricing-footnote { margin-top: 2rem; font-size: 0.85rem; color: var(--muted); }
+    .pricing-footnote a { color: var(--navy); font-weight: 600; }
+
+    .p-cta {
+      display: block;
+      margin-top: 1.75rem;
+      padding: 0.78rem;
+      text-align: center;
+      border-radius: 40px;
+      font-weight: 600;
+      font-size: 0.875rem;
+      transition: all 0.2s;
+      border: 1.5px solid var(--border);
+      color: var(--text);
+    }
+
+    .p-cta:hover { border-color: var(--navy); color: var(--navy); }
+
+    .pricing-card.featured .p-cta {
+      background: var(--navy);
+      color: var(--white);
+      border-color: var(--navy);
+    }
+
+    .pricing-card.featured .p-cta:hover { background: var(--navy-dk); border-color: var(--navy-dk); }
+
+    /* ── FAQ ── */
+    #faq { background: var(--white); }
+
+    .faq-wrap { max-width: 740px; }
+    .faq-list { display: flex; flex-direction: column; }
+    .faq-item { border-bottom: 1px solid var(--border-lt); }
+    .faq-item:first-child { border-top: 1px solid var(--border-lt); }
+
+    .faq-q {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1.5rem;
+      padding: 1.4rem 0;
+      background: none;
+      border: none;
+      cursor: pointer;
+      text-align: left;
+      font-family: inherit;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--dark);
+      letter-spacing: -0.015em;
+      line-height: 1.45;
+      transition: color 0.2s;
+    }
+
+    .faq-q:hover { color: var(--navy); }
+
+    .faq-chevron {
+      width: 18px;
+      height: 18px;
+      stroke: var(--muted);
+      stroke-width: 1.75;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      fill: none;
+      flex-shrink: 0;
+      transition: transform 0.3s;
+    }
+
+    .faq-item.open .faq-chevron { transform: rotate(180deg); stroke: var(--navy); }
+    .faq-item.open .faq-q { color: var(--navy); }
+
+    .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
+
+    .faq-a p {
+      font-size: 0.9rem;
+      color: var(--text);
+      line-height: 1.82;
+      padding-bottom: 1.5rem;
+    }
+
+    .faq-a strong { color: var(--dark); font-weight: 600; }
+
+    /* ── BOOKING ── */
+    #contact { background: var(--bg); }
+
+    .booking-header { max-width: 620px; margin-bottom: 2.5rem; }
+    .booking-header .section-sub { margin-bottom: 0; }
+
+    .booking-wrap {
+      display: grid;
+      grid-template-columns: 1fr 340px;
+      gap: 3rem;
+      align-items: start;
+    }
+
+    .calendly-wrap {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    .calendly-inline-widget { min-width: 320px; height: 700px; }
+
+    .booking-placeholder {
+      min-height: 420px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 3rem 2rem;
+    }
+
+    .booking-placeholder-icon {
+      width: 56px;
+      height: 56px;
+      background: var(--card);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.25rem;
+    }
+
+    .booking-placeholder-icon svg {
+      width: 24px;
+      height: 24px;
+      stroke: var(--navy);
+      stroke-width: 1.75;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      fill: none;
+    }
+
+    .booking-placeholder h3 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--dark);
+      letter-spacing: -0.02em;
+      margin-bottom: 0.6rem;
+    }
+
+    .booking-placeholder p {
+      font-size: 0.9rem;
+      color: var(--text);
+      line-height: 1.7;
+      max-width: 380px;
+      margin-bottom: 1.75rem;
+    }
+
+    .booking-placeholder-btns {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    /* keep the phone button visible inside the booking panel on mobile */
+    .booking-placeholder .btn-outline { display: inline-flex; }
+
+    .booking-side { display: flex; flex-direction: column; gap: 1.5rem; }
+
+    .booking-card {
+      background: var(--white);
+      border: 1px solid var(--border-lt);
+      border-radius: 16px;
+      padding: 1.75rem;
+    }
+
+    .booking-card h4 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--dark);
+      letter-spacing: -0.015em;
+      margin-bottom: 1.1rem;
+    }
+
+    .contact-row { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.9rem; }
+    .contact-row:last-child { margin-bottom: 0; }
+
+    .contact-icon {
+      width: 34px;
+      height: 34px;
+      background: var(--card);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .contact-icon svg {
+      width: 15px;
+      height: 15px;
+      stroke: var(--navy);
+      stroke-width: 1.75;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      fill: none;
+    }
+
+    .c-text strong { display: block; font-size: 0.82rem; font-weight: 600; color: var(--dark); }
+    .c-text span { font-size: 0.82rem; color: var(--muted); }
+
+    .expect-list { list-style: none; display: flex; flex-direction: column; gap: 0.7rem; }
+
+    .expect-list li {
+      font-size: 0.875rem;
+      color: var(--text);
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+
+    .expect-list li::before {
+      content: '✓';
+      color: var(--navy);
+      font-weight: 700;
+      font-size: 0.78rem;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    /* ── MOBILE STICKY BAR ── */
+    .mobile-book-bar {
+      display: none;
+      position: fixed;
+      bottom: 0; left: 0; right: 0;
+      z-index: 300;
+      background: var(--ink);
+      border-top: 1px solid rgba(220,234,248,0.12);
+      padding: 0.875rem 5%;
+      box-shadow: 0 -8px 24px rgba(0,0,0,0.18);
+    }
+
+    .mobile-book-bar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .mbb-text strong {
+      display: block;
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--white);
+    }
+
+    .mbb-text span { font-size: 0.75rem; color: rgba(255,255,255,0.42); }
+
+    .mbb-cta {
+      background: var(--white);
+      color: var(--navy);
+      padding: 0.6rem 1.35rem;
+      border-radius: 40px;
+      font-weight: 600;
+      font-size: 0.875rem;
+      white-space: nowrap;
+      flex-shrink: 0;
+      transition: background 0.2s;
+    }
+
+    .mbb-cta:hover { background: rgba(255,255,255,0.9); }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--ink);
+      padding: 3.5rem 6% 2.75rem;
+      border-top: 1px solid rgba(255,255,255,0.04);
+    }
+
+    .footer-inner {
+      max-width: 860px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .footer-logo {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--white);
+      font-style: italic;
+      letter-spacing: -0.01em;
+      margin-bottom: 0.4rem;
+    }
+
+    .footer-tagline { font-size: 0.82rem; color: rgba(255,255,255,0.3); margin-bottom: 2rem; }
+
+    .footer-nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.5rem 2rem;
+      margin-bottom: 1.75rem;
+    }
+
+    .footer-nav a { font-size: 0.82rem; color: rgba(255,255,255,0.4); transition: color 0.2s; }
+    .footer-nav a:hover { color: var(--white); }
+
+    .footer-email {
+      display: block;
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.32);
+      margin-bottom: 2rem;
+      transition: color 0.2s;
+    }
+
+    .footer-email:hover { color: rgba(255,255,255,0.65); }
+
+    .footer-copy {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.17);
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(255,255,255,0.05);
+    }
+
+    /* ═══════════════════════════════════════════
+       RESPONSIVE
+    ═══════════════════════════════════════════ */
+    @media (max-width: 960px) {
+      .about-wrap { grid-template-columns: 1fr; gap: 3rem; }
+      .about-photo-col { max-width: 300px; }
+      .booking-wrap { grid-template-columns: 1fr; }
+      .booking-side { flex-direction: row; flex-wrap: wrap; }
+      .booking-card { flex: 1 1 280px; }
+    }
+
+    @media (max-width: 640px) {
+      .nav-hamburger { display: flex; }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 68px;
+        left: 0; right: 0;
+        background: var(--white);
+        flex-direction: column;
+        padding: 0.5rem 6% 1.25rem;
+        gap: 0;
+        border-bottom: 1px solid var(--border-lt);
+        align-items: flex-start;
+        box-shadow: 0 8px 24px rgba(28,63,92,0.08);
+      }
+
+      .nav-links.open { display: flex; }
+
+      .nav-links li {
+        width: 100%;
+        padding: 0.85rem 0;
+        border-bottom: 1px solid var(--border-lt);
+      }
+
+      .nav-links li:last-child { border-bottom: none; padding-top: 1rem; }
+      .nav-links a { font-size: 1rem; color: var(--dark); }
+
+      .nav-cta {
+        display: inline-block;
+        padding: 0.6rem 1.4rem !important;
+      }
+
+      .hero { padding: 60px 5% 52px; }
+      .hero h1 { font-size: 1.7rem; line-height: 1.15; }
+      .hero-sub { font-size: 0.95rem; }
+      .btn-outline { display: none; }
+
+      .metrics-inner { flex-wrap: wrap; }
+      .metric { flex: 1 1 50%; border-right: none; border-bottom: 1px solid var(--border-lt); }
+      .metric:nth-child(odd) { border-right: 1px solid var(--border-lt); }
+      .metric:nth-last-child(-n+2) { border-bottom: none; }
+
+      section { padding: 72px 5%; }
+      .section-sub { margin-bottom: 2.5rem; }
+
+      .mobile-book-bar { display: block; }
+      body { padding-bottom: 70px; }
+
+      .steps-row { flex-direction: column; gap: 2rem; }
+      .about-photo-col { max-width: 100%; }
+      .calendly-inline-widget { height: 580px; }
+      .booking-side { flex-direction: column; }
+      .cta-strip { padding: 72px 5%; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav>
+  <div class="nav-logo">Granite Point <em>Advisory</em></div>
+
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#services" onclick="closeNav()">Services</a></li>
+    <li><a href="#why" onclick="closeNav()">Why Us</a></li>
+    <li><a href="#about" onclick="closeNav()">About</a></li>
+    <li><a href="#pricing" onclick="closeNav()">Pricing</a></li>
+    <li><a href="#faq" onclick="closeNav()">FAQ</a></li>
+    <li><a href="#contact" class="nav-cta" onclick="closeNav()">Let's Talk</a></li>
+
+  </ul>
+
+  <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu" onclick="toggleNav()">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ── HERO ── -->
+<section class="hero">
+  <div class="hero-inner">
+    <p class="hero-eyebrow">Bookkeeping &nbsp;·&nbsp; Reporting &nbsp;·&nbsp; Financial Guidance</p>
+    <h1>Better decisions start with better financials.</h1>
+    <p class="hero-sub">From bookkeeping and payroll to reporting and financial guidance, we help business owners understand where they stand and what comes next.</p>
+    <div class="hero-btns">
+      <a href="#contact" class="btn-primary">Book a Free Call</a>
+      <a href="#services" class="btn-outline">Our Services</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── METRICS ── -->
+<div class="metrics">
+  <div class="metrics-inner">
+    <div class="metric">
+      <div class="metric-val">10+</div>
+      <div class="metric-label">Years Experience</div>
+    </div>
+    <div class="metric">
+      <div class="metric-val">$1B+</div>
+      <div class="metric-label">Transactions Advised On</div>
+    </div>
+    <div class="metric">
+      <div class="metric-val">$200M+</div>
+      <div class="metric-label">Capital Raised</div>
+    </div>
+    <div class="metric">
+      <div class="metric-val">Nationwide</div>
+      <div class="metric-label">Remote Service</div>
+    </div>
+  </div>
+</div>
+
+<!-- ── SERVICES ── -->
+<section id="services">
+  <p class="section-eyebrow">What We Offer</p>
+  <h2 class="section-title">Financial visibility for operators</h2>
+  <p class="section-sub">Your books should help you make decisions. We build the financial infrastructure that makes that possible — accurate records paired with clear reporting and dashboards that show you where the business actually stands.</p>
+
+  <div class="services-grid">
+
+    <div class="service-card">
+      <div class="svc-icon">
+        <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+      </div>
+      <h3>Bookkeeping</h3>
+      <p class="svc-desc">Accurate records, reconciled monthly — so your numbers are current, your CPA isn't cleaning up at year-end, and you always know where you stand.</p>
+      <ul class="svc-list">
+        <li>Monthly &amp; weekly reconciliation</li>
+        <li>Transaction categorization</li>
+        <li>Accounts payable &amp; receivable</li>
+        <li>Monthly financial statements</li>
+        <li>Catch-up &amp; cleanup bookkeeping</li>
+      </ul>
+    </div>
+
+    <div class="service-card">
+      <div class="svc-icon">
+        <svg viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+      </div>
+      <h3>Reporting &amp; Financial Guidance</h3>
+      <p class="svc-desc">Finance is operational. We turn your books into clear reporting and dashboards — then interpret what they're telling you about cash, margin, and risk so you can act with confidence.</p>
+      <ul class="svc-list">
+        <li>KPI dashboards &amp; custom reporting</li>
+        <li>Power BI dashboards</li>
+        <li>Financial reporting &amp; analysis</li>
+        <li>Cash flow visibility &amp; forecasting</li>
+        <li>Budgeting, fundraising &amp; investor support</li>
+      </ul>
+    </div>
+
+    <div class="service-card">
+      <div class="svc-icon">
+        <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      </div>
+      <h3>Payroll</h3>
+      <p class="svc-desc">Handled end-to-end, on time, and fully compliant — so payroll is one less operational variable you're managing.</p>
+      <ul class="svc-list">
+        <li>Full-service payroll processing</li>
+        <li>Payroll tax filing &amp; compliance</li>
+        <li>Direct deposit &amp; pay stubs</li>
+        <li>New hire onboarding &amp; garnishments</li>
+        <li>Year-end W-2 &amp; 1099 preparation</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── WHY US ── -->
+<section id="why">
+  <p class="section-eyebrow">Why Granite Point</p>
+  <h2 class="section-title">We help business owners understand what the numbers are actually saying.</h2>
+  <p class="section-sub">Finance is operational. We connect your books to your decisions, your cash position to your next move, and your monthly reports to the things that actually drive your business.</p>
+
+  <div class="why-grid">
+
+    <div class="why-card">
+      <div class="why-icon">
+        <svg viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+      </div>
+      <div class="why-num">01 &nbsp;/&nbsp; Proactive</div>
+      <h4>We don't just keep score</h4>
+      <p>We surface what the numbers mean for your cash, your operations, and your decisions — before you have to ask.</p>
+    </div>
+
+    <div class="why-card">
+      <div class="why-icon">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+      </div>
+      <div class="why-num">02 &nbsp;/&nbsp; Experience</div>
+      <h4>Across industries and stages</h4>
+      <p>We've worked with businesses from early-stage to established mid-market across a wide range of industries and operating models.</p>
+    </div>
+
+    <div class="why-card">
+      <div class="why-icon">
+        <svg viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+      </div>
+      <div class="why-num">03 &nbsp;/&nbsp; Visibility</div>
+      <h4>Know where the business stands</h4>
+      <p>Clean books are important, but understanding cash flow, profitability, and trends is what drives better decisions.</p>
+    </div>
+
+    <div class="why-card">
+      <div class="why-icon">
+        <svg viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+      </div>
+      <div class="why-num">04 &nbsp;/&nbsp; Scalable</div>
+      <h4>One firm, every stage</h4>
+      <p>Start with bookkeeping. Layer in CFO services as you grow. No switching firms, no starting over, no losing context.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── ABOUT ── -->
+<section id="about">
+  <div class="about-wrap">
+
+    <div class="about-photo-col">
+      <div class="about-photo">
+        <img src="jason-headshot.jpg" alt="Jason, Founder of Granite Point Advisory"
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+        <div class="photo-fallback">
+          <svg width="80" height="80" viewBox="0 0 88 88" fill="none">
+            <circle cx="44" cy="32" r="20" fill="#C8D8EE"/>
+            <ellipse cx="44" cy="80" rx="32" ry="24" fill="#C8D8EE"/>
+          </svg>
+          <p class="photo-hint">Save your photo as <strong>jason-headshot.jpg</strong> in the site folder</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="about-text">
+      <p class="section-eyebrow">About</p>
+      <h2 class="section-title">Hi, I'm Jason</h2>
+      <p><strong>I started Granite Point Advisory after spending nearly a decade helping businesses make important financial decisions</strong> through investment banking, corporate development, financial planning, and strategic finance roles.</p>
+      <p>Throughout my career, I saw the same problem repeatedly: business owners were working incredibly hard but often lacked clear, reliable financial information to guide decisions. Without accurate books and meaningful reporting, even great businesses can end up operating on instinct rather than insight.</p>
+      <p>Today, I work directly with business owners to keep their finances organized, provide clear reporting, and help them better understand the numbers behind their business. My goal is simple: give owners the financial clarity they need to make confident decisions and focus on growth.</p>
+      <p>When I'm not working with clients, you'll usually find me cycling, spending time with family, or preparing for the arrival of my first child.</p>
+      <div class="creds">
+        <span class="cred"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Ex-Investment Banking</span>
+        <span class="cred"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Corporate Development &amp; FP&amp;A</span>
+        <span class="cred"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>$1B+ Transactions Advised On</span>
+        <span class="cred"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>$200M+ Capital Raised</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── PROCESS ── -->
+<section id="process">
+  <p class="section-eyebrow">How It Works</p>
+  <h2 class="section-title">A structured start. A lasting partnership.</h2>
+  <p class="section-sub">Onboarding is fast, organized, and designed to create clarity from day one — typically up and running within a week.</p>
+
+  <div class="steps-row">
+    <div class="step">
+      <div class="step-num">1</div>
+      <h4>Free Discovery Call</h4>
+      <p>We learn about your business, your current setup, and what you actually need. No pressure, no commitment — just a straight conversation.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <h4>Custom Proposal</h4>
+      <p>You receive a clear, flat-rate proposal scoped to your business — no hourly billing, no estimates that balloon into surprises.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <h4>Seamless Onboarding</h4>
+      <p>We connect to your accounting system, review your books, and get everything organized. Most clients are fully onboarded within their first week.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">4</div>
+      <h4>Ongoing Partnership</h4>
+      <p>Monthly deliverables, regular check-ins, and a dedicated point of contact who understands your business inside and out.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── PRICING ── -->
+<section id="pricing">
+  <p class="section-eyebrow">Pricing</p>
+  <h2 class="section-title">Transparent, flat-rate pricing.</h2>
+  <p class="section-sub">No hourly billing, no surprise invoices. All plans include a dedicated point of contact and monthly financial statements.</p>
+
+  <div class="pricing-grid">
+
+    <div class="pricing-card">
+      <h3>Essentials</h3>
+      <p class="p-starting">Starting at</p>
+      <div class="p-amount">$500<span class="p-period">/mo</span></div>
+      <p class="p-desc">For early-stage businesses and owner-operators who need clean, reliable books.</p>
+      <ul class="p-list">
+        <li>Monthly bookkeeping</li>
+        <li>Bank &amp; credit card reconciliation</li>
+        <li>Monthly financial statements</li>
+        <li>Annual 1099 preparation</li>
+        <li>Dedicated point of contact</li>
+      </ul>
+      <a href="#contact" class="p-cta">Get Started</a>
+    </div>
+
+    <div class="pricing-card featured">
+      <div class="p-badge">Most Popular</div>
+      <h3>Growth</h3>
+      <p class="p-starting">Starting at</p>
+      <div class="p-amount">$1,200<span class="p-period">/mo</span></div>
+      <p class="p-desc">Bookkeeping + payroll + light CFO advisory for businesses actively scaling operations.</p>
+      <ul class="p-list">
+        <li>Everything in Essentials</li>
+        <li>Full-service payroll processing</li>
+        <li>Quarterly cash flow review</li>
+        <li>KPI dashboard &amp; reporting</li>
+        <li>Monthly strategy call</li>
+      </ul>
+      <a href="#contact" class="p-cta">Get Started</a>
+    </div>
+
+    <div class="pricing-card">
+      <h3>Fractional CFO</h3>
+      <p class="p-starting">Starting at</p>
+      <div class="p-amount">$2,500<span class="p-period">/mo</span></div>
+      <p class="p-desc">Full-stack financial leadership for companies preparing to scale, raise capital, or transact.</p>
+      <ul class="p-list">
+        <li>Everything in Growth</li>
+        <li>Financial modeling &amp; forecasting</li>
+        <li>Budget development &amp; oversight</li>
+        <li>Investor &amp; board reporting</li>
+        <li>Weekly CFO availability</li>
+      </ul>
+      <a href="#contact" class="p-cta">Book a Call</a>
+    </div>
+
+  </div>
+  <p class="pricing-footnote">All pricing is customized — <a href="#contact">book a call</a> for a personalized quote based on your business.</p>
+</section>
+
+<!-- ── FAQ ── -->
+<section id="faq">
+  <p class="section-eyebrow">FAQ</p>
+  <h2 class="section-title">Common questions, honest answers.</h2>
+  <p class="section-sub">Everything you need to know before booking a call. Don't see your question? <a href="#contact" style="color:var(--navy);font-weight:600;">Reach out directly.</a></p>
+
+  <div class="faq-wrap">
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+          <span>What's the difference between bookkeeping and a Fractional CFO?</span>
+          <svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-a" role="region">
+          <p><strong>Bookkeeping</strong> is the foundation — keeping your records accurate, reconciling accounts, categorizing transactions, and producing monthly financials. A <strong>Fractional CFO</strong> is the strategic layer on top: interpreting those numbers, building forecasts, identifying risks and opportunities, and helping you make better high-level decisions. Many clients start with bookkeeping and layer in CFO services as their business grows.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+          <span>How is pricing determined?</span>
+          <svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-a" role="region">
+          <p>Pricing is based on your transaction volume, number of accounts, and which services you need. We provide <strong>flat monthly rates</strong> — no hourly billing, no surprise invoices. After a free discovery call, you'll receive a clear proposal tailored to your business before you commit to anything.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+          <span>How far behind can my books be?</span>
+          <svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-a" role="region">
+          <p>It doesn't matter how far behind you are — whether it's a few months or several years, this is one of the most common situations we step into. We offer <strong>catch-up and cleanup bookkeeping</strong> to get your records current before transitioning to ongoing service. We'll assess the scope during your discovery call and give you a transparent quote for the catch-up work upfront.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+          <span>Can you clean up prior years?</span>
+          <svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-a" role="region">
+          <p>Yes. We regularly rebuild and reconcile <strong>prior-year books</strong> — re-categorizing transactions, fixing reconciliation gaps, and producing clean, tax-ready financials. Once your historical records are accurate, we transition you onto a steady monthly process so you stay current going forward.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+          <span>Do you work with my CPA?</span>
+          <svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-a" role="region">
+          <p>Absolutely — and we encourage it. We <strong>complement your CPA</strong>, not replace them. We handle day-to-day financial operations and produce clean records that make tax season smoother and less expensive for both you and your preparer. We coordinate directly with your CPA as needed throughout the year.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+          <span>What information do you need from me?</span>
+          <svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-a" role="region">
+          <p>To get started, we typically need <strong>view access to your bank and credit card accounts, your accounting system, and payroll</strong> (if applicable), along with a quick conversation about how your business operates. We guide you through exactly what's needed during onboarding — the process is designed to require minimal lift from you.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+          <span>How often will we communicate?</span>
+          <svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-a" role="region">
+          <p>At minimum, you'll receive <strong>monthly financial statements and a summary</strong> from your dedicated contact. Clients on Growth and Fractional CFO plans also receive a monthly strategy call. Beyond scheduled touchpoints, we're accessible by email throughout the month and respond within one business day — usually faster.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+          <span>How long does onboarding take?</span>
+          <svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-a" role="region">
+          <p>Once you sign on, we connect to your accounting system, conduct a thorough review of your books, and get everything organized — typically within the first week. You'll have a dedicated contact from day one and a clear picture of your financials before the end of your first month. The process is designed to require <strong>minimal lift from you</strong>.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA STRIP ── -->
+<div class="cta-strip">
+  <div class="cta-strip-inner">
+    <p class="cta-strip-eyebrow">Get in Touch</p>
+    <h2>Know what your numbers are telling you.</h2>
+    <p>A free 30-minute call — no pitch, no pressure. Just a straight conversation about your business and where we can help.</p>
+    <a href="#contact" class="btn-light">Book a Free Call &nbsp;→</a>
+  </div>
+</div>
+
+<!-- ── BOOKING ── -->
+<section id="contact">
+  <div class="booking-header">
+    <p class="section-eyebrow">Get in Touch</p>
+    <h2 class="section-title">Let's have a real conversation.</h2>
+    <p class="section-sub">Book a free 30-minute call — no pitch, no pressure. We'll talk through where you are, what you need, and whether we're the right fit.</p>
+  </div>
+
+  <div class="booking-wrap">
+    <div class="calendly-wrap">
+      <div class="calendly-inline-widget"
+           data-url="https://calendly.com/jason-granitepointadvisory/30min?hide_event_type_details=1&hide_gdpr_banner=1&primary_color=1c3f5c"
+           style="min-width:320px;height:700px;"></div>
+      <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+    </div>
+
+    <div class="booking-side">
+
+      <div class="booking-card">
+        <h4>Contact Info</h4>
+        <div class="contact-row">
+          <div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+          <div class="c-text"><strong>Email</strong><span>jason@granitepointadvisory.com</span></div>
+        </div>
+        <div class="contact-row">
+          <div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.35 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.77a16 16 0 0 0 6.29 6.29l.87-.87a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+          <div class="c-text"><strong>Phone</strong><span>516-662-4527</span></div>
+        </div>
+        <div class="contact-row">
+          <div class="contact-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+          <div class="c-text"><strong>Hours</strong><span>Mon – Fri, 8am – 6pm EST</span></div>
+        </div>
+        <div class="contact-row">
+          <div class="contact-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+          <div class="c-text"><strong>Location</strong><span>Fully remote — serving clients nationwide</span></div>
+        </div>
+      </div>
+
+      <div class="booking-card">
+        <h4>What to Expect</h4>
+        <ul class="expect-list">
+          <li>A relaxed conversation — no sales pitch</li>
+          <li>We'll assess your current financial setup</li>
+          <li>You'll walk away with clear next steps</li>
+          <li>Transparent pricing, no hidden fees</li>
+          <li>Response within one business day</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── MOBILE STICKY BAR ── -->
+<div class="mobile-book-bar" id="mobileBookBar">
+  <div class="mobile-book-bar-inner">
+    <div class="mbb-text">
+      <strong>Ready to get started?</strong>
+      <span>Free 30-min consultation</span>
+    </div>
+    <a href="#contact" class="mbb-cta">Book a Free Call →</a>
+  </div>
+</div>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">Granite Point Advisory</div>
+    <p class="footer-tagline">Bookkeeping &nbsp;·&nbsp; Fractional CFO &nbsp;·&nbsp; Payroll</p>
+
+    <nav class="footer-nav" aria-label="Footer navigation">
+      <a href="#services">Services</a>
+      <a href="#why">Why Us</a>
+      <a href="#about">About</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Let's Talk</a>
+    </nav>
+
+    <a href="mailto:jason@granitepointadvisory.com" class="footer-email">jason@granitepointadvisory.com</a>
+
+    <p class="footer-copy">© 2026 Granite Point Advisory. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  // Mobile nav toggle
+  function toggleNav() {
+    const links = document.getElementById('navLinks');
+    const hamburger = document.getElementById('hamburger');
+    links.classList.toggle('open');
+    hamburger.classList.toggle('open');
+  }
+
+  function closeNav() {
+    document.getElementById('navLinks').classList.remove('open');
+    document.getElementById('hamburger').classList.remove('open');
+  }
+
+  document.addEventListener('click', function(e) {
+    const nav = document.querySelector('nav');
+    if (!nav.contains(e.target)) closeNav();
+  });
+
+  // FAQ accordion
+  function toggleFaq(btn) {
+    const item = btn.parentElement;
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => {
+      i.classList.remove('open');
+      i.querySelector('.faq-a').style.maxHeight = null;
+      i.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+    });
+    if (!isOpen) {
+      item.classList.add('open');
+      const panel = item.querySelector('.faq-a');
+      panel.style.maxHeight = panel.scrollHeight + 'px';
+      btn.setAttribute('aria-expanded', 'true');
+    }
+  }
+
+  // Hide mobile bar when contact section is visible
+  const mobileBar = document.getElementById('mobileBookBar');
+  const contactSection = document.getElementById('contact');
+  if (mobileBar && contactSection) {
+    new IntersectionObserver(entries => {
+      mobileBar.style.display = entries[0].isIntersecting ? 'none' : '';
+    }, { threshold: 0.15 }).observe(contactSection);
+  }
+
+  // Smooth scroll
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
