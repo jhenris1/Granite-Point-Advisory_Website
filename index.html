@@ -49,18 +49,23 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --bg:        #EEF1F8;   /* light blue-gray page bg */
-      --bg-alt:    #F4F7FC;   /* near-white alt sections */
-      --card:      #DCEAF8;   /* Ridgeline-style blue card bg */
-      --white:     #FFFFFF;
-      --ink:       #1A2E48;   /* footer & CTA strip dark */
-      --dark:      #1A2540;   /* headings */
-      --text:      #3D5068;   /* body text */
-      --muted:     #6E80A0;   /* labels, captions */
-      --border:    #C8D8EE;
-      --border-lt: #DDE6F4;
-      --navy:      #1C3F5C;   /* CTA buttons */
-      --navy-dk:   #152E44;   /* hover */
+      --bg:        #F5F3EF;   /* warm off-white panel fill */
+      --bg-alt:    #F5F3EF;   /* alternating sections */
+      --card:      #F5F3EF;   /* panel fill on white sections */
+      --white:     #FFFFFF;   /* page white */
+      --ink:       #172230;   /* granite navy — footer & CTA strip */
+      --dark:      #172230;   /* granite navy — headings */
+      --text:      #3E4B59;   /* body text */
+      --muted:     #5A6675;   /* secondary text, subheads */
+      --stone:     #8B8478;   /* muted stone — metadata, decorative */
+      --border:    #DCD8D1;   /* hairline rules */
+      --border-lt: #E7E3DC;   /* lighter interior dividers */
+      --navy:      #172230;   /* buttons */
+      --navy-dk:   #0E1620;   /* hover */
+      --brass:     #96703C;   /* the single accent */
+      --brass-sm:  #8A6636;   /* darkened brass for small labels (AA) */
+      --brass-tint:#C9B694;   /* muted tint — list marks */
+      --brass-lt:  #C9A25E;   /* lightened brass — on navy only */
     }
 
     html { scroll-behavior: smooth; }
@@ -99,7 +104,7 @@
       flex-shrink: 0;
     }
 
-    .nav-logo em { font-style: italic; color: var(--navy); }
+    .nav-logo em { font-style: italic; color: var(--brass); }
 
     .nav-links {
       display: flex;
@@ -165,7 +170,7 @@
       font-weight: 600;
       letter-spacing: 0.12em;
       text-transform: uppercase;
-      color: var(--muted);
+      color: var(--brass-sm);
       margin-bottom: 0.85rem;
     }
 
@@ -200,7 +205,7 @@
       font-weight: 600;
       letter-spacing: 0.12em;
       text-transform: uppercase;
-      color: var(--muted);
+      color: var(--brass-sm);
       margin-bottom: 1rem;
     }
 
@@ -256,7 +261,7 @@
       cursor: pointer;
     }
 
-    .btn-outline:hover { border-color: var(--navy); color: var(--navy); }
+    .btn-outline:hover { border-color: var(--brass); color: var(--brass); }
 
     /* ── METRICS ── */
     .metrics {
@@ -308,7 +313,8 @@
     }
 
     .service-card {
-      background: var(--card);
+      background: var(--white);
+      border: 1px solid var(--border);
       border-radius: 16px;
       padding: 2.25rem 2rem;
       transition: transform 0.25s;
@@ -319,13 +325,13 @@
     .svc-icon {
       width: 44px;
       height: 44px;
-      background: var(--white);
+      background: var(--card);
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
       margin-bottom: 1.4rem;
-      box-shadow: 0 1px 6px rgba(28,63,92,0.09);
+      box-shadow: 0 1px 6px rgba(23,34,48,0.07);
     }
 
     .svc-icon svg {
@@ -370,11 +376,10 @@
       display: block;
       width: 5px;
       height: 5px;
-      background: var(--navy);
+      background: var(--brass-tint);
       border-radius: 50%;
       flex-shrink: 0;
       margin-top: 0.52rem;
-      opacity: 0.45;
     }
 
     /* ── WHY US ── */
@@ -396,13 +401,13 @@
 
     .why-card:hover {
       border-color: var(--border);
-      box-shadow: 0 6px 24px rgba(28,63,92,0.06);
+      box-shadow: 0 6px 24px rgba(23,34,48,0.06);
     }
 
     .why-icon {
       width: 44px;
       height: 44px;
-      background: var(--card);
+      background: var(--white);
       border-radius: 50%;
       display: flex;
       align-items: center;
@@ -425,7 +430,7 @@
       font-weight: 600;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: var(--muted);
+      color: var(--brass-sm);
       margin-bottom: 0.55rem;
     }
 
@@ -453,12 +458,12 @@
       text-align: center;
     }
 
-    .cta-strip-eyebrow {
+    .cta-strip p.cta-strip-eyebrow {
       font-size: 0.7rem;
       font-weight: 600;
       letter-spacing: 0.12em;
       text-transform: uppercase;
-      color: rgba(255,255,255,0.35);
+      color: var(--brass-lt);
       margin-bottom: 1.25rem;
     }
 
@@ -531,7 +536,7 @@
       width: 100%;
       height: 100%;
     }
-    .photo-hint { font-size: 0.8rem; color: var(--muted); font-weight: 500; text-align: center; padding: 0 1rem; }
+    .photo-hint { font-size: 0.8rem; color: var(--stone); font-weight: 500; text-align: center; padding: 0 1rem; }
 
     .about-text .section-title { margin-bottom: 1.25rem; }
     .about-text p { font-size: 1rem; color: var(--text); line-height: 1.82; margin-bottom: 1rem; }
@@ -555,7 +560,7 @@
     .cred svg {
       width: 13px;
       height: 13px;
-      stroke: var(--navy);
+      stroke: var(--brass);
       stroke-width: 2.5;
       stroke-linecap: round;
       stroke-linejoin: round;
@@ -597,7 +602,7 @@
       justify-content: center;
       font-size: 0.875rem;
       font-weight: 700;
-      color: var(--navy);
+      color: var(--brass);
       margin-bottom: 1.25rem;
       flex-shrink: 0;
     }
@@ -633,11 +638,11 @@
       transition: box-shadow 0.2s;
     }
 
-    .pricing-card:hover { box-shadow: 0 8px 32px rgba(28,63,92,0.08); }
+    .pricing-card:hover { box-shadow: 0 8px 32px rgba(23,34,48,0.08); }
 
     .pricing-card.featured {
       border-color: var(--navy);
-      box-shadow: 0 12px 40px rgba(28,63,92,0.11);
+      box-shadow: 0 12px 40px rgba(23,34,48,0.11);
     }
 
     .p-badge {
@@ -705,7 +710,7 @@
 
     .p-list li::before {
       content: '✓';
-      color: var(--navy);
+      color: var(--brass);
       font-weight: 700;
       font-size: 0.78rem;
       flex-shrink: 0;
@@ -713,7 +718,7 @@
     }
 
     .pricing-footnote { margin-top: 2rem; font-size: 0.85rem; color: var(--muted); }
-    .pricing-footnote a { color: var(--navy); font-weight: 600; }
+    .pricing-footnote a { color: var(--brass); font-weight: 600; }
 
     .p-cta {
       display: block;
@@ -780,8 +785,8 @@
       transition: transform 0.3s;
     }
 
-    .faq-item.open .faq-chevron { transform: rotate(180deg); stroke: var(--navy); }
-    .faq-item.open .faq-q { color: var(--navy); }
+    .faq-item.open .faq-chevron { transform: rotate(180deg); stroke: var(--brass); }
+    .faq-item.open .faq-q { color: var(--dark); }
 
     .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
 
@@ -931,7 +936,7 @@
 
     .expect-list li::before {
       content: '✓';
-      color: var(--navy);
+      color: var(--brass);
       font-weight: 700;
       font-size: 0.78rem;
       flex-shrink: 0;
@@ -945,7 +950,7 @@
       bottom: 0; left: 0; right: 0;
       z-index: 300;
       background: var(--ink);
-      border-top: 1px solid rgba(220,234,248,0.12);
+      border-top: 1px solid rgba(245,243,239,0.12);
       padding: 0.875rem 5%;
       box-shadow: 0 -8px 24px rgba(0,0,0,0.18);
     }
@@ -1058,7 +1063,7 @@
         gap: 0;
         border-bottom: 1px solid var(--border-lt);
         align-items: flex-start;
-        box-shadow: 0 8px 24px rgba(28,63,92,0.08);
+        box-shadow: 0 8px 24px rgba(23,34,48,0.08);
       }
 
       .nav-links.open { display: flex; }
@@ -1270,8 +1275,8 @@
              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
         <div class="photo-fallback">
           <svg width="80" height="80" viewBox="0 0 88 88" fill="none">
-            <circle cx="44" cy="32" r="20" fill="#C8D8EE"/>
-            <ellipse cx="44" cy="80" rx="32" ry="24" fill="#C8D8EE"/>
+            <circle cx="44" cy="32" r="20" fill="#DCD8D1"/>
+            <ellipse cx="44" cy="80" rx="32" ry="24" fill="#DCD8D1"/>
           </svg>
           <p class="photo-hint">Save your photo as <strong>jason-headshot.jpg</strong> in the site folder</p>
         </div>
@@ -1388,7 +1393,7 @@
 <section id="faq">
   <p class="section-eyebrow">FAQ</p>
   <h2 class="section-title">Common questions, honest answers.</h2>
-  <p class="section-sub">Everything you need to know before booking a call. Don't see your question? <a href="#contact" style="color:var(--navy);font-weight:600;">Reach out directly.</a></p>
+  <p class="section-sub">Everything you need to know before booking a call. Don't see your question? <a href="#contact" style="color:var(--brass);font-weight:600;">Reach out directly.</a></p>
 
   <div class="faq-wrap">
     <div class="faq-list">
