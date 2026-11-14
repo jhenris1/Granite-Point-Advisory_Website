@@ -19,7 +19,6 @@
   <meta name="twitter:title" content="Fractional CFO & Financial Operations | Granite Point Advisory" />
   <meta name="twitter:description" content="Bookkeeping, fractional CFO, and payroll for serious business owners. Flat-rate pricing, no surprises." />
   <meta name="theme-color" content="#ffffff" />
-  <!-- build: 2026-06-02 -->
 
   <!-- Structured Data -->
   <script type="application/ld+json">
@@ -38,1600 +37,754 @@
   </script>
 
   <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="dns-prefetch" href="//assets.calendly.com" />
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&family=Inter:wght@400;500;600;700&display=swap" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&family=Inter:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'" />
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&family=Inter:wght@400;500;600;700&display=swap" /></noscript>
-
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    :root {
-      --bg:        #F5F3EF;   /* warm off-white panel fill */
-      --bg-alt:    #F5F3EF;   /* alternating sections */
-      --card:      #F5F3EF;   /* panel fill on white sections */
-      --white:     #FFFFFF;   /* page white */
-      --ink:       #172230;   /* granite navy — footer & CTA strip */
-      --dark:      #172230;   /* granite navy — headings */
-      --text:      #3E4B59;   /* body text */
-      --muted:     #5A6675;   /* secondary text, subheads */
-      --stone:     #8B8478;   /* muted stone — metadata, decorative */
-      --border:    #DCD8D1;   /* hairline rules */
-      --border-lt: #E7E3DC;   /* lighter interior dividers */
-      --navy:      #172230;   /* buttons */
-      --navy-dk:   #0E1620;   /* hover */
-      --brass:     #96703C;   /* the single accent */
-      --brass-sm:  #8A6636;   /* darkened brass for small labels (AA) */
-      --brass-tint:#C9B694;   /* muted tint — list marks */
-      --brass-lt:  #C9A25E;   /* lightened brass — on navy only */
-    }
-
-    html { scroll-behavior: smooth; }
-
-    body {
-      font-family: 'Inter', system-ui, -apple-system, sans-serif;
-      color: var(--text);
-      background: var(--bg);
-      line-height: 1.7;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-
-    a { color: inherit; text-decoration: none; }
-
-    /* ── NAV ── */
-    body > nav {
-      position: sticky;
-      top: 0;
-      z-index: 200;
-      height: 68px;
-      background: var(--white);
-      border-bottom: 1px solid var(--border-lt);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 6%;
-    }
-
-    .nav-logo {
-      font-family: 'Playfair Display', Georgia, serif;
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: var(--dark);
-      letter-spacing: -0.01em;
-      flex-shrink: 0;
-    }
-
-    .nav-logo em { font-style: italic; color: var(--brass); }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 2rem;
-      list-style: none;
-    }
-
-    .nav-links a {
-      font-size: 0.875rem;
-      font-weight: 500;
-      color: var(--muted);
-      letter-spacing: -0.01em;
-      transition: color 0.2s;
-    }
-
-    .nav-links a:hover { color: var(--dark); }
-
-    .nav-cta {
-      background: var(--navy) !important;
-      color: var(--white) !important;
-      padding: 0.5rem 1.35rem !important;
-      border-radius: 40px !important;
-      font-weight: 600 !important;
-      font-size: 0.875rem !important;
-      transition: background 0.2s !important;
-      letter-spacing: 0 !important;
-    }
-
-    .nav-cta:hover { background: var(--navy-dk) !important; color: var(--white) !important; }
-
-    /* Hamburger */
-    .nav-hamburger {
-      display: none;
-      flex-direction: column;
-      justify-content: center;
-      gap: 5px;
-      background: none;
-      border: none;
-      cursor: pointer;
-      padding: 6px;
-      z-index: 210;
-    }
-
-    .nav-hamburger span {
-      display: block;
-      width: 22px;
-      height: 2px;
-      background: var(--dark);
-      border-radius: 2px;
-      transition: transform 0.25s, opacity 0.25s;
-    }
-
-    .nav-hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
-    .nav-hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
-    .nav-hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
-
-    /* ── SHARED ── */
-    section { padding: 100px 6%; }
-
-    .section-eyebrow {
-      font-size: 0.7rem;
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--brass-sm);
-      margin-bottom: 0.85rem;
-    }
-
-    .section-title {
-      font-family: 'Playfair Display', Georgia, serif;
-      font-size: clamp(1.5rem, 3vw, 2.1rem);
-      font-weight: 700;
-      color: var(--dark);
-      line-height: 1.15;
-      letter-spacing: -0.02em;
-      margin-bottom: 1.1rem;
-    }
-
-    .section-sub {
-      font-size: 1rem;
-      color: var(--muted);
-      max-width: 560px;
-      line-height: 1.8;
-      margin-bottom: 3.5rem;
-    }
-
-    /* ── HERO ── */
-    .hero {
-      background: var(--bg);
-      padding: 84px 6% 72px;
-    }
-
-    .hero-inner { max-width: 720px; }
-
-    .hero-eyebrow {
-      font-size: 0.7rem;
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--brass-sm);
-      margin-bottom: 1rem;
-    }
-
-    .hero h1 {
-      font-family: 'Playfair Display', Georgia, serif;
-      font-size: clamp(1.75rem, 3.8vw, 2.7rem);
-      font-weight: 700;
-      line-height: 1.13;
-      letter-spacing: -0.025em;
-      color: var(--dark);
-      margin-bottom: 1.1rem;
-    }
-
-    .hero-sub {
-      font-size: 1rem;
-      color: var(--text);
-      max-width: 500px;
-      margin-bottom: 2rem;
-      line-height: 1.78;
-    }
-
-    .hero-btns { display: flex; gap: 0.875rem; flex-wrap: wrap; }
-
-    .btn-primary {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      padding: 0.78rem 1.75rem;
-      border-radius: 40px;
-      font-weight: 600;
-      font-size: 0.9rem;
-      background: var(--navy);
-      color: var(--white);
-      transition: background 0.2s, transform 0.2s;
-      border: none;
-      cursor: pointer;
-    }
-
-    .btn-primary:hover { background: var(--navy-dk); transform: translateY(-1px); }
-
-    .btn-outline {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      padding: 0.75rem 1.75rem;
-      border-radius: 40px;
-      font-weight: 500;
-      font-size: 0.9rem;
-      background: transparent;
-      color: var(--text);
-      border: 1.5px solid var(--border);
-      transition: border-color 0.2s, color 0.2s;
-      cursor: pointer;
-    }
-
-    .btn-outline:hover { border-color: var(--brass); color: var(--brass); }
-
-    /* ── METRICS ── */
-    .metrics {
-      background: var(--white);
-      border-top: 1px solid var(--border-lt);
-      border-bottom: 1px solid var(--border-lt);
-    }
-
-    .metrics-inner {
-      display: flex;
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-
-    .metric {
-      flex: 1;
-      text-align: center;
-      padding: 2.25rem 1rem;
-      border-right: 1px solid var(--border-lt);
-    }
-
-    .metric:last-child { border-right: none; }
-
-    .metric-val {
-      font-family: 'Playfair Display', Georgia, serif;
-      font-size: 2rem;
-      font-weight: 700;
-      color: var(--dark);
-      letter-spacing: -0.04em;
-      line-height: 1;
-      margin-bottom: 0.4rem;
-    }
-
-    .metric-label {
-      font-size: 0.7rem;
-      font-weight: 600;
-      color: var(--muted);
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-
-    /* ── SERVICES ── */
-    #services { background: var(--bg); }
-
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
-    }
-
-    .service-card {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 2.25rem 2rem;
-      transition: transform 0.25s;
-    }
-
-    .service-card:hover { transform: translateY(-3px); }
-
-    .svc-icon {
-      width: 44px;
-      height: 44px;
-      background: var(--card);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 1.4rem;
-      box-shadow: 0 1px 6px rgba(23,34,48,0.07);
-    }
-
-    .svc-icon svg {
-      width: 19px;
-      height: 19px;
-      stroke: var(--navy);
-      stroke-width: 1.75;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-      fill: none;
-    }
-
-    .service-card h3 {
-      font-family: 'Playfair Display', Georgia, serif;
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: var(--dark);
-      letter-spacing: -0.02em;
-      margin-bottom: 0.5rem;
-      line-height: 1.25;
-    }
-
-    .svc-desc {
-      font-size: 0.875rem;
-      color: var(--text);
-      margin-bottom: 1.25rem;
-      line-height: 1.7;
-    }
-
-    .svc-list { list-style: none; display: flex; flex-direction: column; gap: 0.55rem; }
-
-    .svc-list li {
-      font-size: 0.875rem;
-      color: var(--text);
-      display: flex;
-      align-items: flex-start;
-      gap: 0.6rem;
-    }
-
-    .svc-list li::before {
-      content: '';
-      display: block;
-      width: 5px;
-      height: 5px;
-      background: var(--brass-tint);
-      border-radius: 50%;
-      flex-shrink: 0;
-      margin-top: 0.52rem;
-    }
-
-    /* ── WHY US ── */
-    #why { background: var(--white); }
-
-    .why-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 1.5rem;
-    }
-
-    .why-card {
-      background: var(--bg-alt);
-      border: 1px solid var(--border-lt);
-      border-radius: 16px;
-      padding: 2.25rem 2rem;
-      transition: border-color 0.2s, box-shadow 0.2s;
-    }
-
-    .why-card:hover {
-      border-color: var(--border);
-      box-shadow: 0 6px 24px rgba(23,34,48,0.06);
-    }
-
-    .why-icon {
-      width: 44px;
-      height: 44px;
-      background: var(--white);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 1.25rem;
-    }
-
-    .why-icon svg {
-      width: 20px;
-      height: 20px;
-      stroke: var(--navy);
-      stroke-width: 1.75;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-      fill: none;
-    }
-
-    .why-num {
-      font-size: 0.68rem;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--brass-sm);
-      margin-bottom: 0.55rem;
-    }
-
-    .why-card h4 {
-      font-family: 'Playfair Display', Georgia, serif;
-      font-size: 1.05rem;
-      font-weight: 700;
-      color: var(--dark);
-      letter-spacing: -0.015em;
-      margin-bottom: 0.55rem;
-      line-height: 1.3;
-    }
-
-    .why-card p { font-size: 0.875rem; color: var(--text); line-height: 1.75; }
-
-    /* ── CTA STRIP ── */
-    .cta-strip {
-      background: var(--ink);
-      padding: 88px 6%;
-    }
-
-    .cta-strip-inner {
-      max-width: 620px;
-      margin: 0 auto;
-      text-align: center;
-    }
-
-    .cta-strip p.cta-strip-eyebrow {
-      font-size: 0.7rem;
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--brass-lt);
-      margin-bottom: 1.25rem;
-    }
-
-    .cta-strip h2 {
-      font-family: 'Playfair Display', Georgia, serif;
-      font-size: clamp(1.4rem, 2.8vw, 1.9rem);
-      font-weight: 700;
-      color: var(--white);
-      letter-spacing: -0.022em;
-      line-height: 1.18;
-      margin-bottom: 1rem;
-    }
-
-    .cta-strip p {
-      font-size: 0.97rem;
-      color: rgba(255,255,255,0.48);
-      line-height: 1.78;
-      margin-bottom: 2.25rem;
-    }
-
-    .btn-light {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      padding: 0.8rem 2rem;
-      border-radius: 40px;
-      font-weight: 600;
-      font-size: 0.9rem;
-      background: var(--white);
-      color: var(--navy);
-      transition: background 0.2s, transform 0.2s;
-      border: none;
-      cursor: pointer;
-    }
-
-    .btn-light:hover { background: rgba(255,255,255,0.9); transform: translateY(-1px); }
-
-    /* ── ABOUT ── */
-    #about { background: var(--bg-alt); }
-
-    .about-wrap {
-      display: grid;
-      grid-template-columns: 340px 1fr;
-      gap: 5rem;
-      align-items: center;
-      max-width: 1040px;
-    }
-
-    .about-photo {
-      width: 100%;
-      aspect-ratio: 4 / 5;
-      border-radius: 18px;
-      overflow: hidden;
-      background: var(--card);
-      border: 1px solid var(--border);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 0.75rem;
-    }
-
-    .about-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
-    .photo-fallback {
-      display: none;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 0.75rem;
-      width: 100%;
-      height: 100%;
-    }
-    .photo-hint { font-size: 0.8rem; color: var(--stone); font-weight: 500; text-align: center; padding: 0 1rem; }
-
-    .about-text .section-title { margin-bottom: 1.25rem; }
-    .about-text p { font-size: 1rem; color: var(--text); line-height: 1.82; margin-bottom: 1rem; }
-    .about-text p strong { color: var(--dark); font-weight: 600; }
-
-    .creds { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 2rem; }
-
-    .cred {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.35rem;
-      padding: 0.4rem 0.95rem;
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 40px;
-      font-size: 0.8rem;
-      font-weight: 600;
-      color: var(--dark);
-    }
-
-    .cred svg {
-      width: 13px;
-      height: 13px;
-      stroke: var(--brass);
-      stroke-width: 2.5;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-      fill: none;
-      flex-shrink: 0;
-    }
-
-    /* ── PROCESS ── */
-    #process { background: var(--white); }
-
-    .steps-row {
-      display: flex;
-      gap: 2.5rem;
-      align-items: flex-start;
-    }
-
-    .step { flex: 1; position: relative; }
-
-    @media (min-width: 641px) {
-      .step:not(:last-child)::after {
-        content: '';
-        position: absolute;
-        top: 20px;
-        left: 42px;
-        right: -2.5rem;
-        height: 1px;
-        background: var(--border);
-        pointer-events: none;
-      }
-    }
-
-    .step-num {
-      width: 40px;
-      height: 40px;
-      background: var(--card);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.875rem;
-      font-weight: 700;
-      color: var(--brass);
-      margin-bottom: 1.25rem;
-      flex-shrink: 0;
-    }
-
-    .step h4 {
-      font-family: 'Playfair Display', Georgia, serif;
-      font-size: 1rem;
-      font-weight: 700;
-      color: var(--dark);
-      letter-spacing: -0.015em;
-      margin-bottom: 0.55rem;
-      line-height: 1.3;
-    }
-
-    .step p { font-size: 0.875rem; color: var(--text); line-height: 1.72; }
-
-    /* ── PRICING ── */
-    #pricing { background: var(--bg-alt); }
-
-    .pricing-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(265px, 1fr));
-      gap: 1.5rem;
-      max-width: 1000px;
-    }
-
-    .pricing-card {
-      background: var(--white);
-      border: 1px solid var(--border-lt);
-      border-radius: 18px;
-      padding: 2.25rem 2rem;
-      position: relative;
-      transition: box-shadow 0.2s;
-    }
-
-    .pricing-card:hover { box-shadow: 0 8px 32px rgba(23,34,48,0.08); }
-
-    .pricing-card.featured {
-      border-color: var(--navy);
-      box-shadow: 0 12px 40px rgba(23,34,48,0.11);
-    }
-
-    .p-badge {
-      position: absolute;
-      top: -12px;
-      left: 1.75rem;
-      background: var(--navy);
-      color: var(--white);
-      font-size: 0.68rem;
-      font-weight: 700;
-      letter-spacing: 0.09em;
-      text-transform: uppercase;
-      padding: 0.25rem 0.8rem;
-      border-radius: 40px;
-    }
-
-    .pricing-card h3 {
-      font-family: 'Playfair Display', Georgia, serif;
-      font-size: 1.05rem;
-      font-weight: 700;
-      color: var(--dark);
-      letter-spacing: -0.02em;
-      margin-bottom: 0.5rem;
-    }
-
-    .p-starting {
-      font-size: 0.72rem;
-      font-weight: 600;
-      letter-spacing: 0.07em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-top: 0.6rem;
-    }
-
-    .p-amount {
-      font-family: 'Playfair Display', Georgia, serif;
-      font-size: 2.1rem;
-      font-weight: 700;
-      color: var(--dark);
-      letter-spacing: -0.04em;
-      line-height: 1;
-      margin: 0.15rem 0 0.3rem;
-    }
-
-    .p-period { font-size: 0.875rem; color: var(--muted); font-weight: 500; }
-
-    .p-desc {
-      font-size: 0.875rem;
-      color: var(--text);
-      margin: 0.75rem 0 1.5rem;
-      padding-bottom: 1.5rem;
-      border-bottom: 1px solid var(--border-lt);
-      line-height: 1.65;
-    }
-
-    .p-list { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
-
-    .p-list li {
-      font-size: 0.875rem;
-      color: var(--text);
-      display: flex;
-      align-items: flex-start;
-      gap: 0.5rem;
-    }
-
-    .p-list li::before {
-      content: '✓';
-      color: var(--brass);
-      font-weight: 700;
-      font-size: 0.78rem;
-      flex-shrink: 0;
-      margin-top: 1px;
-    }
-
-    .pricing-footnote { margin-top: 2rem; font-size: 0.85rem; color: var(--muted); }
-    .pricing-footnote a { color: var(--brass); font-weight: 600; }
-
-    .p-cta {
-      display: block;
-      margin-top: 1.75rem;
-      padding: 0.78rem;
-      text-align: center;
-      border-radius: 40px;
-      font-weight: 600;
-      font-size: 0.875rem;
-      transition: all 0.2s;
-      border: 1.5px solid var(--border);
-      color: var(--text);
-    }
-
-    .p-cta:hover { border-color: var(--navy); color: var(--navy); }
-
-    .pricing-card.featured .p-cta {
-      background: var(--navy);
-      color: var(--white);
-      border-color: var(--navy);
-    }
-
-    .pricing-card.featured .p-cta:hover { background: var(--navy-dk); border-color: var(--navy-dk); }
-
-    /* ── FAQ ── */
-    #faq { background: var(--white); }
-
-    .faq-wrap { max-width: 740px; }
-    .faq-list { display: flex; flex-direction: column; }
-    .faq-item { border-bottom: 1px solid var(--border-lt); }
-    .faq-item:first-child { border-top: 1px solid var(--border-lt); }
-
-    .faq-q {
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 1.5rem;
-      padding: 1.4rem 0;
-      background: none;
-      border: none;
-      cursor: pointer;
-      text-align: left;
-      font-family: inherit;
-      font-size: 0.95rem;
-      font-weight: 600;
-      color: var(--dark);
-      letter-spacing: -0.015em;
-      line-height: 1.45;
-      transition: color 0.2s;
-    }
-
-    .faq-q:hover { color: var(--navy); }
-
-    .faq-chevron {
-      width: 18px;
-      height: 18px;
-      stroke: var(--muted);
-      stroke-width: 1.75;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-      fill: none;
-      flex-shrink: 0;
-      transition: transform 0.3s;
-    }
-
-    .faq-item.open .faq-chevron { transform: rotate(180deg); stroke: var(--brass); }
-    .faq-item.open .faq-q { color: var(--dark); }
-
-    .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
-
-    .faq-a p {
-      font-size: 0.9rem;
-      color: var(--text);
-      line-height: 1.82;
-      padding-bottom: 1.5rem;
-    }
-
-    .faq-a strong { color: var(--dark); font-weight: 600; }
-
-    /* ── BOOKING ── */
-    #contact { background: var(--bg); }
-
-    .booking-header { max-width: 620px; margin-bottom: 2.5rem; }
-    .booking-header .section-sub { margin-bottom: 0; }
-
-    .booking-wrap {
-      display: grid;
-      grid-template-columns: 1fr 340px;
-      gap: 3rem;
-      align-items: start;
-    }
-
-    .calendly-wrap {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      overflow: hidden;
-    }
-
-    .calendly-inline-widget { min-width: 320px; height: 700px; }
-
-    .booking-placeholder {
-      min-height: 420px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 3rem 2rem;
-    }
-
-    .booking-placeholder-icon {
-      width: 56px;
-      height: 56px;
-      background: var(--card);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 1.25rem;
-    }
-
-    .booking-placeholder-icon svg {
-      width: 24px;
-      height: 24px;
-      stroke: var(--navy);
-      stroke-width: 1.75;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-      fill: none;
-    }
-
-    .booking-placeholder h3 {
-      font-family: 'Playfair Display', Georgia, serif;
-      font-size: 1.25rem;
-      font-weight: 700;
-      color: var(--dark);
-      letter-spacing: -0.02em;
-      margin-bottom: 0.6rem;
-    }
-
-    .booking-placeholder p {
-      font-size: 0.9rem;
-      color: var(--text);
-      line-height: 1.7;
-      max-width: 380px;
-      margin-bottom: 1.75rem;
-    }
-
-    .booking-placeholder-btns {
-      display: flex;
-      gap: 0.75rem;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    /* keep the phone button visible inside the booking panel on mobile */
-    .booking-placeholder .btn-outline { display: inline-flex; }
-
-    .booking-side { display: flex; flex-direction: column; gap: 1.5rem; }
-
-    .booking-card {
-      background: var(--white);
-      border: 1px solid var(--border-lt);
-      border-radius: 16px;
-      padding: 1.75rem;
-    }
-
-    .booking-card h4 {
-      font-family: 'Playfair Display', Georgia, serif;
-      font-size: 1rem;
-      font-weight: 700;
-      color: var(--dark);
-      letter-spacing: -0.015em;
-      margin-bottom: 1.1rem;
-    }
-
-    .contact-row { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.9rem; }
-    .contact-row:last-child { margin-bottom: 0; }
-
-    .contact-icon {
-      width: 34px;
-      height: 34px;
-      background: var(--card);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-    }
-
-    .contact-icon svg {
-      width: 15px;
-      height: 15px;
-      stroke: var(--navy);
-      stroke-width: 1.75;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-      fill: none;
-    }
-
-    .c-text strong { display: block; font-size: 0.82rem; font-weight: 600; color: var(--dark); }
-    .c-text span { font-size: 0.82rem; color: var(--muted); }
-
-    .expect-list { list-style: none; display: flex; flex-direction: column; gap: 0.7rem; }
-
-    .expect-list li {
-      font-size: 0.875rem;
-      color: var(--text);
-      display: flex;
-      align-items: flex-start;
-      gap: 0.5rem;
-    }
-
-    .expect-list li::before {
-      content: '✓';
-      color: var(--brass);
-      font-weight: 700;
-      font-size: 0.78rem;
-      flex-shrink: 0;
-      margin-top: 1px;
-    }
-
-    /* ── MOBILE STICKY BAR ── */
-    .mobile-book-bar {
-      display: none;
-      position: fixed;
-      bottom: 0; left: 0; right: 0;
-      z-index: 300;
-      background: var(--ink);
-      border-top: 1px solid rgba(245,243,239,0.12);
-      padding: 0.875rem 5%;
-      box-shadow: 0 -8px 24px rgba(0,0,0,0.18);
-    }
-
-    .mobile-book-bar-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-    }
-
-    .mbb-text strong {
-      display: block;
-      font-size: 0.875rem;
-      font-weight: 600;
-      color: var(--white);
-    }
-
-    .mbb-text span { font-size: 0.75rem; color: rgba(255,255,255,0.42); }
-
-    .mbb-cta {
-      background: var(--white);
-      color: var(--navy);
-      padding: 0.6rem 1.35rem;
-      border-radius: 40px;
-      font-weight: 600;
-      font-size: 0.875rem;
-      white-space: nowrap;
-      flex-shrink: 0;
-      transition: background 0.2s;
-    }
-
-    .mbb-cta:hover { background: rgba(255,255,255,0.9); }
-
-    /* ── FOOTER ── */
-    footer {
-      background: var(--ink);
-      padding: 3.5rem 6% 2.75rem;
-      border-top: 1px solid rgba(255,255,255,0.04);
-    }
-
-    .footer-inner {
-      max-width: 860px;
-      margin: 0 auto;
-      text-align: center;
-    }
-
-    .footer-logo {
-      font-family: 'Playfair Display', Georgia, serif;
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: var(--white);
-      font-style: italic;
-      letter-spacing: -0.01em;
-      margin-bottom: 0.4rem;
-    }
-
-    .footer-tagline { font-size: 0.82rem; color: rgba(255,255,255,0.3); margin-bottom: 2rem; }
-
-    .footer-nav {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 0.5rem 2rem;
-      margin-bottom: 1.75rem;
-    }
-
-    .footer-nav a { font-size: 0.82rem; color: rgba(255,255,255,0.4); transition: color 0.2s; }
-    .footer-nav a:hover { color: var(--white); }
-
-    .footer-email {
-      display: block;
-      font-size: 0.82rem;
-      color: rgba(255,255,255,0.32);
-      margin-bottom: 2rem;
-      transition: color 0.2s;
-    }
-
-    .footer-email:hover { color: rgba(255,255,255,0.65); }
-
-    .footer-copy {
-      font-size: 0.78rem;
-      color: rgba(255,255,255,0.17);
-      padding-top: 1.5rem;
-      border-top: 1px solid rgba(255,255,255,0.05);
-    }
-
-    /* ═══════════════════════════════════════════
-       RESPONSIVE
-    ═══════════════════════════════════════════ */
-    @media (max-width: 960px) {
-      .about-wrap { grid-template-columns: 1fr; gap: 3rem; }
-      .about-photo-col { max-width: 300px; }
-      .booking-wrap { grid-template-columns: 1fr; }
-      .booking-side { flex-direction: row; flex-wrap: wrap; }
-      .booking-card { flex: 1 1 280px; }
-    }
-
-    @media (max-width: 640px) {
-      .nav-hamburger { display: flex; }
-
-      .nav-links {
-        display: none;
-        position: absolute;
-        top: 68px;
-        left: 0; right: 0;
-        background: var(--white);
-        flex-direction: column;
-        padding: 0.5rem 6% 1.25rem;
-        gap: 0;
-        border-bottom: 1px solid var(--border-lt);
-        align-items: flex-start;
-        box-shadow: 0 8px 24px rgba(23,34,48,0.08);
-      }
-
-      .nav-links.open { display: flex; }
-
-      .nav-links li {
-        width: 100%;
-        padding: 0.85rem 0;
-        border-bottom: 1px solid var(--border-lt);
-      }
-
-      .nav-links li:last-child { border-bottom: none; padding-top: 1rem; }
-      .nav-links a { font-size: 1rem; color: var(--dark); }
-
-      .nav-cta {
-        display: inline-block;
-        padding: 0.6rem 1.4rem !important;
-      }
-
-      .hero { padding: 60px 5% 52px; }
-      .hero h1 { font-size: 1.7rem; line-height: 1.15; }
-      .hero-sub { font-size: 0.95rem; }
-      .btn-outline { display: none; }
-
-      .metrics-inner { flex-wrap: wrap; }
-      .metric { flex: 1 1 50%; border-right: none; border-bottom: 1px solid var(--border-lt); }
-      .metric:nth-child(odd) { border-right: 1px solid var(--border-lt); }
-      .metric:nth-last-child(-n+2) { border-bottom: none; }
-
-      section { padding: 72px 5%; }
-      .section-sub { margin-bottom: 2.5rem; }
-
-      .mobile-book-bar { display: block; }
-      body { padding-bottom: 70px; }
-
-      .steps-row { flex-direction: column; gap: 2rem; }
-      .about-photo-col { max-width: 100%; }
-      .calendly-inline-widget { height: 580px; }
-      .booking-side { flex-direction: column; }
-      .cta-strip { padding: 72px 5%; }
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+
+<style>
+body{margin:0;background:#FFFFFF}
+html{scroll-behavior:smooth}
+a{color:#2350F0;text-decoration:none}a:hover{color:#12308F}
+.gp-btn{transition:transform .2s ease, box-shadow .2s ease, background .2s ease}
+.gp-btn:hover{transform:translateY(-1px);box-shadow:0 10px 24px rgba(35,80,240,.28)}
+.gp-ghost{transition:background .2s ease, border-color .2s ease}
+.gp-ghost:hover{background:#F5F7FB;border-color:#C9D3E6}
+.gp-card{transition:transform .3s ease, box-shadow .3s ease, border-color .3s ease}
+.gp-card:hover{transform:translateY(-4px);box-shadow:0 24px 48px rgba(16,40,110,.10);border-color:#C9D7FF}
+.gp-navlink{color:#4B5875;transition:color .2s ease}.gp-navlink:hover{color:#0A1630}
+@keyframes gpUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+@keyframes gpFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.gp-in{animation:gpUp .8s ease both}
+.gp-float{animation:gpFloat 6s ease-in-out infinite}
+/* inline display:flex on these elements outranks a plain rule — !important is required */
+@media (max-width: 860px){.gp-navlinks{display:none !important}.gp-float{display:none !important}}
+
+.gp-bar{transition:transform .35s ease, opacity .35s ease;transform-origin:bottom}
+.gp-bar:hover{transform:scaleY(1.04);opacity:.85}
+.gp-kpi{transition:transform .25s ease, box-shadow .25s ease}
+.gp-kpi:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(16,40,110,.10)}
+
+/* shared section container */
+.gp-wrap{max-width:1200px;margin:0 auto;padding:112px 32px}
+
+/* ── PRICING ── */
+.gp-price-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:20px;align-items:start}
+.gp-price{position:relative;background:#FFFFFF;border:1px solid #E4E9F2;border-radius:20px;padding:32px;display:flex;flex-direction:column;box-shadow:0 1px 2px rgba(16,40,110,.04)}
+.gp-price.is-featured{border-color:#2350F0;box-shadow:0 24px 48px rgba(35,80,240,.12)}
+.gp-price-badge{position:absolute;top:-13px;left:32px;background:#2350F0;color:#FFFFFF;font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;padding:5px 12px;border-radius:999px}
+.gp-price h3{margin:0;font-size:19px;font-weight:700;letter-spacing:-.01em}
+.gp-price-start{margin:14px 0 0;font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:500;letter-spacing:.07em;text-transform:uppercase;color:#5F6B85}
+.gp-price-amt{font-size:40px;font-weight:800;letter-spacing:-.03em;line-height:1;margin-top:6px}
+.gp-price-amt span{font-size:15px;font-weight:500;color:#5F6B85;letter-spacing:0}
+.gp-price-desc{margin:14px 0 20px;padding-bottom:20px;border-bottom:1px solid #EEF1F6;font-size:15px;line-height:1.6;color:#4B5875}
+.gp-price-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px;font-size:14px;color:#0A1630}
+.gp-price-list li{display:flex;gap:10px;align-items:flex-start}
+.gp-price-list li::before{content:'';flex-shrink:0;margin-top:7px;width:6px;height:6px;border-radius:2px;background:#2350F0}
+.gp-price-cta{margin-top:28px;display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 20px;border-radius:12px;border:1px solid #E4E9F2;background:#FFFFFF;color:#0A1630;font-size:15px;font-weight:600;transition:background .2s ease,border-color .2s ease}
+.gp-price-cta:hover{background:#F5F7FB;border-color:#C9D3E6;color:#0A1630}
+.gp-price.is-featured .gp-price-cta{background:#2350F0;border-color:#2350F0;color:#FFFFFF}
+.gp-price.is-featured .gp-price-cta:hover{background:#12308F;border-color:#12308F;color:#FFFFFF}
+
+/* ── FAQ ── */
+.gp-faq{max-width:820px;margin:0 auto}
+.gp-faq-item{border-bottom:1px solid #E4E9F2}
+.gp-faq-item:first-child{border-top:1px solid #E4E9F2}
+.gp-faq-q{width:100%;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:22px 0;background:none;border:none;cursor:pointer;text-align:left;font-family:inherit;font-size:17px;font-weight:700;letter-spacing:-.01em;color:#0A1630;line-height:1.4;transition:color .2s ease}
+.gp-faq-q:hover{color:#2350F0}
+.gp-faq-chev{flex-shrink:0;width:20px;height:20px;stroke:#5F6B85;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round;transition:transform .3s ease,stroke .2s ease}
+.gp-faq-item.is-open .gp-faq-chev{transform:rotate(180deg);stroke:#2350F0}
+.gp-faq-item.is-open .gp-faq-q{color:#2350F0}
+.gp-faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease}
+.gp-faq-a p{margin:0;padding:0 0 24px;font-size:16px;line-height:1.7;color:#4B5875;max-width:70ch}
+.gp-faq-a strong{color:#0A1630;font-weight:700}
+
+/* ── BOOKING ── */
+.gp-book-grid{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:24px;align-items:start}
+.gp-cal{background:#FFFFFF;border:1px solid #E4E9F2;border-radius:20px;overflow:hidden;box-shadow:0 1px 2px rgba(16,40,110,.04)}
+.calendly-inline-widget{min-width:320px;height:700px}
+.gp-book-side{display:flex;flex-direction:column;gap:20px}
+.gp-book-card{background:#FFFFFF;border:1px solid #E4E9F2;border-radius:20px;padding:28px}
+.gp-book-card h3{margin:0 0 18px;font-size:17px;font-weight:700;letter-spacing:-.01em}
+.gp-crow{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.gp-crow:last-child{margin-bottom:0}
+.gp-cicon{flex-shrink:0;width:38px;height:38px;border-radius:11px;background:#EAF0FF;display:flex;align-items:center;justify-content:center}
+.gp-cicon svg{width:17px;height:17px;stroke:#2350F0;stroke-width:1.9;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.gp-ctext strong{display:block;font-size:13px;font-weight:700;color:#0A1630}
+.gp-ctext span{font-size:13px;color:#4B5875;word-break:break-word}
+.gp-expect{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:11px;font-size:14px;color:#4B5875}
+.gp-expect li{display:flex;gap:10px;align-items:flex-start}
+.gp-expect li::before{content:'';flex-shrink:0;margin-top:7px;width:6px;height:6px;border-radius:2px;background:#2350F0}
+
+/* ═══════ RESPONSIVE ═══════ */
+@media (max-width: 1000px){
+  .gp-book-grid{grid-template-columns:1fr}
+  .gp-book-side{flex-direction:row;flex-wrap:wrap}
+  .gp-book-card{flex:1 1 280px}
+}
+@media (max-width: 860px){
+  .gp-wrap{padding:72px 24px !important}
+  .gp-hero-wrap{padding:72px 24px 40px !important}
+  .gp-dash-wrap{padding:0 24px 72px !important}
+  .gp-diag-wrap{padding:0 24px 72px !important}
+  .gp-diag-card{padding:44px 28px !important}
+  .gp-stats-wrap{padding:40px 24px !important}
+  .gp-foot-wrap{padding:56px 24px 32px !important}
+  .gp-about-grid{gap:40px !important}
+  .gp-about-badge{position:static !important;margin-top:16px;display:inline-block}
+}
+@media (max-width: 560px){
+  .gp-wrap{padding:56px 20px !important}
+  .gp-hero-wrap{padding:56px 20px 32px !important}
+  .gp-dash-wrap{padding:0 20px 56px !important}
+  .gp-diag-wrap{padding:0 20px 56px !important}
+  .gp-diag-card{padding:36px 22px !important;border-radius:22px !important}
+  .gp-stats-wrap{padding:32px 20px !important;gap:24px !important}
+  .gp-foot-wrap{padding:48px 20px 28px !important}
+  .gp-head-wrap{padding:0 20px !important;gap:12px !important}
+  .gp-head-wrap > a.gp-btn{white-space:nowrap;padding:0 16px !important}
+  .gp-sec-card{padding:26px !important}
+  .gp-price{padding:26px !important}
+  .gp-book-card{padding:24px !important}
+  .gp-faq-q{font-size:16px;padding:18px 0}
+  .gp-stat-num{font-size:32px !important}
+  .calendly-inline-widget{height:620px}
+}
+</style>
 </head>
-<body>
+<body id="top">
+<div style="width: 100%; font-family: 'Plus Jakarta Sans', system-ui, sans-serif; color: #0A1630; background: #FFFFFF">
 
-<!-- ── NAV ── -->
-<nav>
-  <div class="nav-logo">Granite Point <em>Advisory</em></div>
-
-  <ul class="nav-links" id="navLinks">
-    <li><a href="#services" onclick="closeNav()">Services</a></li>
-    <li><a href="#why" onclick="closeNav()">Why Us</a></li>
-    <li><a href="#about" onclick="closeNav()">About</a></li>
-    <li><a href="#pricing" onclick="closeNav()">Pricing</a></li>
-    <li><a href="#faq" onclick="closeNav()">FAQ</a></li>
-    <li><a href="#contact" class="nav-cta" onclick="closeNav()">Let's Talk</a></li>
-
-  </ul>
-
-  <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu" onclick="toggleNav()">
-    <span></span><span></span><span></span>
-  </button>
+<header style="position: relative; z-index: 2; border-bottom: 1px solid #EEF1F6; background: rgba(255,255,255,.85)">
+<div class="gp-head-wrap" style="max-width: 1200px; margin: 0 auto; padding: 0 32px; height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 24px">
+<a href="#top" style="display: flex; align-items: center; gap: 10px; color: #0A1630">
+<svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true"><path d="M3 27 L13 9 L19 19 L22 14 L29 27 Z" fill="#2350F0"></path><path d="M13 9 L19 19 L16 27 L3 27 Z" fill="#12308F"></path></svg>
+<span style="font-weight: 800; font-size: 17px; letter-spacing: -.01em">Granite Point <span style="font-weight: 500; color: #4B5875">Advisory</span></span>
+</a>
+<nav class="gp-navlinks" style="display: flex; gap: 32px; font-size: 15px; font-weight: 500">
+<a class="gp-navlink" href="#services">Services</a>
+<a class="gp-navlink" href="#process">Process</a>
+<a class="gp-navlink" href="#about">About</a>
+<a class="gp-navlink" href="#diagnostic">CFO Diagnostic</a>
+<a class="gp-navlink" href="#pricing">Pricing</a>
+<a class="gp-navlink" href="#contact">Contact</a>
 </nav>
+<a class="gp-btn" href="#contact" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 20px; border-radius: 10px; background: #0A1630; color: #FFFFFF; font-size: 14px; font-weight: 600">Book a call</a>
+</div>
+</header>
 
-<!-- ── HERO ── -->
-<section class="hero">
-  <div class="hero-inner">
-    <p class="hero-eyebrow">Bookkeeping &nbsp;·&nbsp; Reporting &nbsp;·&nbsp; Financial Guidance</p>
-    <h1>Better decisions start with better financials.</h1>
-    <p class="hero-sub">From bookkeeping and payroll to reporting and financial guidance, we help business owners understand where they stand and what comes next.</p>
-    <div class="hero-btns">
-      <a href="#contact" class="btn-primary">Book a Free Call</a>
-      <a href="#services" class="btn-outline">Our Services</a>
-    </div>
-  </div>
-</section>
-
-<!-- ── METRICS ── -->
-<div class="metrics">
-  <div class="metrics-inner">
-    <div class="metric">
-      <div class="metric-val">10+</div>
-      <div class="metric-label">Years Experience</div>
-    </div>
-    <div class="metric">
-      <div class="metric-val">$1B+</div>
-      <div class="metric-label">Transactions Advised On</div>
-    </div>
-    <div class="metric">
-      <div class="metric-val">$200M+</div>
-      <div class="metric-label">Capital Raised</div>
-    </div>
-    <div class="metric">
-      <div class="metric-val">Nationwide</div>
-      <div class="metric-label">Remote Service</div>
-    </div>
-  </div>
+<section style="position: relative; overflow: hidden; background: radial-gradient(1100px 520px at 50% -10%, #E3EBFF 0%, rgba(227,235,255,0) 70%), linear-gradient(180deg, #FFFFFF 0%, #F5F7FB 100%)">
+<div class="gp-in gp-hero-wrap" style="max-width: 980px; margin: 0 auto; padding: 96px 32px 56px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 24px">
+<div style="display: inline-flex; align-items: center; gap: 10px; padding: 6px 14px 6px 6px; border-radius: 999px; background: #FFFFFF; border: 1px solid #E4E9F2; box-shadow: 0 2px 8px rgba(16,40,110,.05); font-size: 13px; font-weight: 500; color: #4B5875">
+<span style="background: #EAF0FF; color: #2350F0; font-weight: 700; padding: 3px 10px; border-radius: 999px; font-size: 12px">New</span>
+Complimentary CFO Diagnostic — delivered in 5 business days
+</div>
+<h1 style="margin: 0; font-size: clamp(38px, 6.2vw, 78px); line-height: 1.02; letter-spacing: -.035em; font-weight: 800">Institutional-grade finance,<br><span style="background: linear-gradient(90deg, #2350F0 0%, #5B8CFF 100%); -webkit-background-clip: text; background-clip: text; color: transparent">built for growing businesses.</span></h1>
+<p style="margin: 0; max-width: 680px; font-size: 19px; line-height: 1.6; color: #4B5875">Granite Point pairs investment-banking-caliber financial expertise with hands-on execution — clean books, live dashboards, forecasts you can act on, and a CFO in your corner for the decisions that matter.</p>
+<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 8px">
+<a class="gp-btn" href="#diagnostic" style="display: inline-flex; align-items: center; gap: 10px; min-height: 52px; padding: 0 26px; border-radius: 12px; background: #2350F0; color: #FFFFFF; font-size: 16px; font-weight: 600">Get your free CFO Diagnostic
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+<a class="gp-ghost" href="#services" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 24px; border-radius: 12px; background: #FFFFFF; border: 1px solid #E4E9F2; color: #0A1630; font-size: 16px; font-weight: 600">Explore services</a>
+</div>
+<div style="font-size: 13px; color: #5F6B85">No pitch, no obligation · Flat-rate engagements · Serving clients nationwide</div>
 </div>
 
-<!-- ── SERVICES ── -->
-<section id="services">
-  <p class="section-eyebrow">What We Offer</p>
-  <h2 class="section-title">Financial visibility for operators</h2>
-  <p class="section-sub">Your books should help you make decisions. We build the financial infrastructure that makes that possible — accurate records paired with clear reporting and dashboards that show you where the business actually stands.</p>
+<div class="gp-dash-wrap" style="position: relative; max-width: 1200px; margin: 0 auto; padding: 0 32px 96px">
+<div class="gp-float" style="position: absolute; z-index: 3; left: -4px; top: 150px; width: 230px; background: #FFFFFF; border: 1px solid #E4E9F2; border-radius: 14px; padding: 14px 16px; box-shadow: 0 20px 40px rgba(16,40,110,.14)">
+<div style="display: flex; align-items: center; gap: 10px">
+<div style="width: 32px; height: 32px; border-radius: 9px; background: #E7F6EF; display: flex; align-items: center; justify-content: center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#12805C" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"></path></svg></div>
+<div><div style="font-size: 13px; font-weight: 700">September close complete</div><div style="font-size: 12px; color: #5F6B85">Financials delivered · day 6</div></div>
+</div>
+</div>
+<div class="gp-float" style="position: absolute; z-index: 3; right: -4px; top: 380px; width: 250px; background: #FFFFFF; border: 1px solid #E4E9F2; border-radius: 14px; padding: 14px 16px; box-shadow: 0 20px 40px rgba(16,40,110,.14); animation-delay: -3s">
+<div style="font-size: 11px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: #8A4B08">CFO note</div>
+<div style="font-size: 13px; line-height: 1.5; margin-top: 6px; color: #0A1630">AR over 60 days is up $48K. Recommend tightening terms on two wholesale accounts.</div>
+</div>
+<div style="overflow-x: auto; padding: 4px 4px 24px">
+<div style="min-width: 1000px">
+<div style="width: 100%; height: 700px; box-sizing: border-box; font-family: 'Plus Jakarta Sans', system-ui, sans-serif; color: #0A1630; background: #FFFFFF; border: 1px solid #E4E9F2; border-radius: 20px; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 30px 80px rgba(16,40,110,.14), 0 2px 6px rgba(16,40,110,.06)">
 
-  <div class="services-grid">
-
-    <div class="service-card">
-      <div class="svc-icon">
-        <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-      </div>
-      <h3>Bookkeeping</h3>
-      <p class="svc-desc">Accurate records, reconciled monthly — so your numbers are current, your CPA isn't cleaning up at year-end, and you always know where you stand.</p>
-      <ul class="svc-list">
-        <li>Monthly &amp; weekly reconciliation</li>
-        <li>Transaction categorization</li>
-        <li>Accounts payable &amp; receivable</li>
-        <li>Monthly financial statements</li>
-        <li>Catch-up &amp; cleanup bookkeeping</li>
-      </ul>
-    </div>
-
-    <div class="service-card">
-      <div class="svc-icon">
-        <svg viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
-      </div>
-      <h3>Reporting &amp; Financial Guidance</h3>
-      <p class="svc-desc">Finance is operational. We turn your books into clear reporting and dashboards — then interpret what they're telling you about cash, margin, and risk so you can act with confidence.</p>
-      <ul class="svc-list">
-        <li>KPI dashboards &amp; custom reporting</li>
-        <li>Power BI dashboards</li>
-        <li>Financial reporting &amp; analysis</li>
-        <li>Cash flow visibility &amp; forecasting</li>
-        <li>Budgeting, fundraising &amp; investor support</li>
-      </ul>
-    </div>
-
-    <div class="service-card">
-      <div class="svc-icon">
-        <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-      </div>
-      <h3>Payroll</h3>
-      <p class="svc-desc">Handled end-to-end, on time, and fully compliant — so payroll is one less operational variable you're managing.</p>
-      <ul class="svc-list">
-        <li>Full-service payroll processing</li>
-        <li>Payroll tax filing &amp; compliance</li>
-        <li>Direct deposit &amp; pay stubs</li>
-        <li>New hire onboarding &amp; garnishments</li>
-        <li>Year-end W-2 &amp; 1099 preparation</li>
-      </ul>
-    </div>
-
-  </div>
-</section>
-
-<!-- ── WHY US ── -->
-<section id="why">
-  <p class="section-eyebrow">Why Granite Point</p>
-  <h2 class="section-title">We help business owners understand what the numbers are actually saying.</h2>
-  <p class="section-sub">Finance is operational. We connect your books to your decisions, your cash position to your next move, and your monthly reports to the things that actually drive your business.</p>
-
-  <div class="why-grid">
-
-    <div class="why-card">
-      <div class="why-icon">
-        <svg viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
-      </div>
-      <div class="why-num">01 &nbsp;/&nbsp; Proactive</div>
-      <h4>We don't just keep score</h4>
-      <p>We surface what the numbers mean for your cash, your operations, and your decisions — before you have to ask.</p>
-    </div>
-
-    <div class="why-card">
-      <div class="why-icon">
-        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-      </div>
-      <div class="why-num">02 &nbsp;/&nbsp; Experience</div>
-      <h4>Across industries and stages</h4>
-      <p>We've worked with businesses from early-stage to established mid-market across a wide range of industries and operating models.</p>
-    </div>
-
-    <div class="why-card">
-      <div class="why-icon">
-        <svg viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
-      </div>
-      <div class="why-num">03 &nbsp;/&nbsp; Visibility</div>
-      <h4>Know where the business stands</h4>
-      <p>Clean books are important, but understanding cash flow, profitability, and trends is what drives better decisions.</p>
-    </div>
-
-    <div class="why-card">
-      <div class="why-icon">
-        <svg viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
-      </div>
-      <div class="why-num">04 &nbsp;/&nbsp; Scalable</div>
-      <h4>One firm, every stage</h4>
-      <p>Start with bookkeeping. Layer in CFO services as you grow. No switching firms, no starting over, no losing context.</p>
-    </div>
-
-  </div>
-</section>
-
-<!-- ── ABOUT ── -->
-<section id="about">
-  <div class="about-wrap">
-
-    <div class="about-photo-col">
-      <div class="about-photo">
-        <img src="jason-headshot.jpg" alt="Jason, Founder of Granite Point Advisory"
-             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-        <div class="photo-fallback">
-          <svg width="80" height="80" viewBox="0 0 88 88" fill="none">
-            <circle cx="44" cy="32" r="20" fill="#DCD8D1"/>
-            <ellipse cx="44" cy="80" rx="32" ry="24" fill="#DCD8D1"/>
-          </svg>
-          <p class="photo-hint">Save your photo as <strong>jason-headshot.jpg</strong> in the site folder</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="about-text">
-      <p class="section-eyebrow">About</p>
-      <h2 class="section-title">Hi, I'm Jason</h2>
-      <p><strong>I started Granite Point Advisory after spending nearly a decade helping businesses make important financial decisions</strong> through investment banking, corporate development, financial planning, and strategic finance roles.</p>
-      <p>Throughout my career, I saw the same problem repeatedly: business owners were working incredibly hard but often lacked clear, reliable financial information to guide decisions. Without accurate books and meaningful reporting, even great businesses can end up operating on instinct rather than insight.</p>
-      <p>Today, I work directly with business owners to keep their finances organized, provide clear reporting, and help them better understand the numbers behind their business. My goal is simple: give owners the financial clarity they need to make confident decisions and focus on growth.</p>
-      <p>When I'm not working with clients, you'll usually find me cycling, spending time with family, or preparing for the arrival of my first child.</p>
-      <div class="creds">
-        <span class="cred"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Ex-Investment Banking</span>
-        <span class="cred"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Corporate Development &amp; FP&amp;A</span>
-        <span class="cred"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>$1B+ Transactions Advised On</span>
-        <span class="cred"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>$200M+ Capital Raised</span>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- ── PROCESS ── -->
-<section id="process">
-  <p class="section-eyebrow">How It Works</p>
-  <h2 class="section-title">A structured start. A lasting partnership.</h2>
-  <p class="section-sub">Onboarding is fast, organized, and designed to create clarity from day one — typically up and running within a week.</p>
-
-  <div class="steps-row">
-    <div class="step">
-      <div class="step-num">1</div>
-      <h4>Free Discovery Call</h4>
-      <p>We learn about your business, your current setup, and what you actually need. No pressure, no commitment — just a straight conversation.</p>
-    </div>
-    <div class="step">
-      <div class="step-num">2</div>
-      <h4>Custom Proposal</h4>
-      <p>You receive a clear, flat-rate proposal scoped to your business — no hourly billing, no estimates that balloon into surprises.</p>
-    </div>
-    <div class="step">
-      <div class="step-num">3</div>
-      <h4>Seamless Onboarding</h4>
-      <p>We connect to your accounting system, review your books, and get everything organized. Most clients are fully onboarded within their first week.</p>
-    </div>
-    <div class="step">
-      <div class="step-num">4</div>
-      <h4>Ongoing Partnership</h4>
-      <p>Monthly deliverables, regular check-ins, and a dedicated point of contact who understands your business inside and out.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ── PRICING ── -->
-<section id="pricing">
-  <p class="section-eyebrow">Pricing</p>
-  <h2 class="section-title">Transparent, flat-rate pricing.</h2>
-  <p class="section-sub">No hourly billing, no surprise invoices. All plans include a dedicated point of contact and monthly financial statements.</p>
-
-  <div class="pricing-grid">
-
-    <div class="pricing-card">
-      <h3>Essentials</h3>
-      <p class="p-starting">Starting at</p>
-      <div class="p-amount">$500<span class="p-period">/mo</span></div>
-      <p class="p-desc">For early-stage businesses and owner-operators who need clean, reliable books.</p>
-      <ul class="p-list">
-        <li>Monthly bookkeeping</li>
-        <li>Bank &amp; credit card reconciliation</li>
-        <li>Monthly financial statements</li>
-        <li>Annual 1099 preparation</li>
-        <li>Dedicated point of contact</li>
-      </ul>
-      <a href="#contact" class="p-cta">Get Started</a>
-    </div>
-
-    <div class="pricing-card featured">
-      <div class="p-badge">Most Popular</div>
-      <h3>Growth</h3>
-      <p class="p-starting">Starting at</p>
-      <div class="p-amount">$1,200<span class="p-period">/mo</span></div>
-      <p class="p-desc">Bookkeeping + payroll + light CFO advisory for businesses actively scaling operations.</p>
-      <ul class="p-list">
-        <li>Everything in Essentials</li>
-        <li>Full-service payroll processing</li>
-        <li>Quarterly cash flow review</li>
-        <li>KPI dashboard &amp; reporting</li>
-        <li>Monthly strategy call</li>
-      </ul>
-      <a href="#contact" class="p-cta">Get Started</a>
-    </div>
-
-    <div class="pricing-card">
-      <h3>Fractional CFO</h3>
-      <p class="p-starting">Starting at</p>
-      <div class="p-amount">$2,500<span class="p-period">/mo</span></div>
-      <p class="p-desc">Full-stack financial leadership for companies preparing to scale, raise capital, or transact.</p>
-      <ul class="p-list">
-        <li>Everything in Growth</li>
-        <li>Financial modeling &amp; forecasting</li>
-        <li>Budget development &amp; oversight</li>
-        <li>Investor &amp; board reporting</li>
-        <li>Weekly CFO availability</li>
-      </ul>
-      <a href="#contact" class="p-cta">Book a Call</a>
-    </div>
-
-  </div>
-  <p class="pricing-footnote">All pricing is customized — <a href="#contact">book a call</a> for a personalized quote based on your business.</p>
-</section>
-
-<!-- ── FAQ ── -->
-<section id="faq">
-  <p class="section-eyebrow">FAQ</p>
-  <h2 class="section-title">Common questions, honest answers.</h2>
-  <p class="section-sub">Everything you need to know before booking a call. Don't see your question? <a href="#contact" style="color:var(--brass);font-weight:600;">Reach out directly.</a></p>
-
-  <div class="faq-wrap">
-    <div class="faq-list">
-
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
-          <span>What's the difference between bookkeeping and a Fractional CFO?</span>
-          <svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
-        </button>
-        <div class="faq-a" role="region">
-          <p><strong>Bookkeeping</strong> is the foundation — keeping your records accurate, reconciling accounts, categorizing transactions, and producing monthly financials. A <strong>Fractional CFO</strong> is the strategic layer on top: interpreting those numbers, building forecasts, identifying risks and opportunities, and helping you make better high-level decisions. Many clients start with bookkeeping and layer in CFO services as their business grows.</p>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
-          <span>How is pricing determined?</span>
-          <svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
-        </button>
-        <div class="faq-a" role="region">
-          <p>Pricing is based on your transaction volume, number of accounts, and which services you need. We provide <strong>flat monthly rates</strong> — no hourly billing, no surprise invoices. After a free discovery call, you'll receive a clear proposal tailored to your business before you commit to anything.</p>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
-          <span>How far behind can my books be?</span>
-          <svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
-        </button>
-        <div class="faq-a" role="region">
-          <p>It doesn't matter how far behind you are — whether it's a few months or several years, this is one of the most common situations we step into. We offer <strong>catch-up and cleanup bookkeeping</strong> to get your records current before transitioning to ongoing service. We'll assess the scope during your discovery call and give you a transparent quote for the catch-up work upfront.</p>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
-          <span>Can you clean up prior years?</span>
-          <svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
-        </button>
-        <div class="faq-a" role="region">
-          <p>Yes. We regularly rebuild and reconcile <strong>prior-year books</strong> — re-categorizing transactions, fixing reconciliation gaps, and producing clean, tax-ready financials. Once your historical records are accurate, we transition you onto a steady monthly process so you stay current going forward.</p>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
-          <span>Do you work with my CPA?</span>
-          <svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
-        </button>
-        <div class="faq-a" role="region">
-          <p>Absolutely — and we encourage it. We <strong>complement your CPA</strong>, not replace them. We handle day-to-day financial operations and produce clean records that make tax season smoother and less expensive for both you and your preparer. We coordinate directly with your CPA as needed throughout the year.</p>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
-          <span>What information do you need from me?</span>
-          <svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
-        </button>
-        <div class="faq-a" role="region">
-          <p>To get started, we typically need <strong>view access to your bank and credit card accounts, your accounting system, and payroll</strong> (if applicable), along with a quick conversation about how your business operates. We guide you through exactly what's needed during onboarding — the process is designed to require minimal lift from you.</p>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
-          <span>How often will we communicate?</span>
-          <svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
-        </button>
-        <div class="faq-a" role="region">
-          <p>At minimum, you'll receive <strong>monthly financial statements and a summary</strong> from your dedicated contact. Clients on Growth and Fractional CFO plans also receive a monthly strategy call. Beyond scheduled touchpoints, we're accessible by email throughout the month and respond within one business day — usually faster.</p>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
-          <span>How long does onboarding take?</span>
-          <svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
-        </button>
-        <div class="faq-a" role="region">
-          <p>Once you sign on, we connect to your accounting system, conduct a thorough review of your books, and get everything organized — typically within the first week. You'll have a dedicated contact from day one and a clear picture of your financials before the end of your first month. The process is designed to require <strong>minimal lift from you</strong>.</p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ── CTA STRIP ── -->
-<div class="cta-strip">
-  <div class="cta-strip-inner">
-    <p class="cta-strip-eyebrow">Get in Touch</p>
-    <h2>Know what your numbers are telling you.</h2>
-    <p>A free 30-minute call — no pitch, no pressure. Just a straight conversation about your business and where we can help.</p>
-    <a href="#contact" class="btn-light">Book a Free Call &nbsp;→</a>
-  </div>
+<div style="height: 56px; flex-shrink: 0; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; border-bottom: 1px solid #E4E9F2; background: #FBFCFE">
+<div style="display: flex; align-items: center; gap: 10px">
+<svg width="22" height="22" viewBox="0 0 32 32" aria-hidden="true"><path d="M3 27 L13 9 L19 19 L22 14 L29 27 Z" fill="#2350F0"></path><path d="M13 9 L19 19 L16 27 L3 27 Z" fill="#12308F"></path></svg>
+<div style="font-weight: 700; font-size: 14px">Granite Point</div>
+<div style="font-size: 13px; color: #5F6B85">/ Northwind Supply Co.</div>
+</div>
+<div style="display: flex; align-items: center; gap: 10px">
+<div style="font-size: 11px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: #8A4B08; background: #FFF4E5; border: 1px solid #F6D9AE; padding: 4px 10px; border-radius: 999px">Illustrative data</div>
+<div style="font-size: 13px; color: #4B5875; border: 1px solid #E4E9F2; padding: 6px 12px; border-radius: 8px; background: #FFFFFF">Period: Sep 2026</div>
+</div>
 </div>
 
-<!-- ── BOOKING ── -->
-<section id="contact">
-  <div class="booking-header">
-    <p class="section-eyebrow">Get in Touch</p>
-    <h2 class="section-title">Let's have a real conversation.</h2>
-    <p class="section-sub">Book a free 30-minute call — no pitch, no pressure. We'll talk through where you are, what you need, and whether we're the right fit.</p>
-  </div>
-
-  <div class="booking-wrap">
-    <div class="calendly-wrap">
-      <div class="calendly-inline-widget"
-           data-url="https://calendly.com/jason-granitepointadvisory/30min?hide_event_type_details=1&hide_gdpr_banner=1&primary_color=1c3f5c"
-           style="min-width:320px;height:700px;"></div>
-      <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-    </div>
-
-    <div class="booking-side">
-
-      <div class="booking-card">
-        <h4>Contact Info</h4>
-        <div class="contact-row">
-          <div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
-          <div class="c-text"><strong>Email</strong><span>jason@granitepointadvisory.com</span></div>
-        </div>
-        <div class="contact-row">
-          <div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.35 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.77a16 16 0 0 0 6.29 6.29l.87-.87a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
-          <div class="c-text"><strong>Phone</strong><span>516-662-4527</span></div>
-        </div>
-        <div class="contact-row">
-          <div class="contact-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
-          <div class="c-text"><strong>Hours</strong><span>Mon – Fri, 8am – 6pm EST</span></div>
-        </div>
-        <div class="contact-row">
-          <div class="contact-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
-          <div class="c-text"><strong>Location</strong><span>Fully remote — serving clients nationwide</span></div>
-        </div>
-      </div>
-
-      <div class="booking-card">
-        <h4>What to Expect</h4>
-        <ul class="expect-list">
-          <li>A relaxed conversation — no sales pitch</li>
-          <li>We'll assess your current financial setup</li>
-          <li>You'll walk away with clear next steps</li>
-          <li>Transparent pricing, no hidden fees</li>
-          <li>Response within one business day</li>
-        </ul>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ── MOBILE STICKY BAR ── -->
-<div class="mobile-book-bar" id="mobileBookBar">
-  <div class="mobile-book-bar-inner">
-    <div class="mbb-text">
-      <strong>Ready to get started?</strong>
-      <span>Free 30-min consultation</span>
-    </div>
-    <a href="#contact" class="mbb-cta">Book a Free Call →</a>
-  </div>
+<div style="flex: 1; display: flex; min-height: 0">
+<div style="width: 190px; flex-shrink: 0; border-right: 1px solid #E4E9F2; padding: 18px 12px; display: flex; flex-direction: column; gap: 4px; background: #FBFCFE">
+<div style="font-size: 11px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: #5F6B85; padding: 0 10px 8px">Reporting</div>
+<div style="font-size: 13px; font-weight: 600; color: #2350F0; background: #EAF0FF; padding: 9px 10px; border-radius: 8px">Overview</div>
+<div style="font-size: 13px; color: #4B5875; padding: 9px 10px">Cash &amp; forecast</div>
+<div style="font-size: 13px; color: #4B5875; padding: 9px 10px">P&amp;L</div>
+<div style="font-size: 13px; color: #4B5875; padding: 9px 10px">KPIs</div>
+<div style="font-size: 13px; color: #4B5875; padding: 9px 10px">Budget vs actual</div>
+<div style="font-size: 11px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: #5F6B85; padding: 18px 10px 8px">Close</div>
+<div style="font-size: 13px; color: #4B5875; padding: 9px 10px; display: flex; justify-content: space-between">Sep close <span style="color: #12805C; font-weight: 600">Done</span></div>
+<div style="font-size: 13px; color: #4B5875; padding: 9px 10px">Board pack</div>
 </div>
 
-<!-- ── FOOTER ── -->
-<footer>
-  <div class="footer-inner">
-    <div class="footer-logo">Granite Point Advisory</div>
-    <p class="footer-tagline">Bookkeeping &nbsp;·&nbsp; Fractional CFO &nbsp;·&nbsp; Payroll</p>
+<div style="flex: 1; min-width: 0; padding: 20px 22px; display: flex; flex-direction: column; gap: 16px; background: #F5F7FB">
+<div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px">
+<div class="gp-kpi" style="background: #FFFFFF; border: 1px solid #E4E9F2; border-radius: 14px; padding: 14px 16px">
+<div style="font-size: 12px; color: #5F6B85">Revenue (TTM)</div>
+<div style="font-size: 26px; font-weight: 700; letter-spacing: -.02em; margin-top: 4px">$8.46M</div>
+<div style="font-size: 12px; color: #12805C; font-weight: 600; margin-top: 2px">▲ 18.4% YoY</div>
+</div>
+<div class="gp-kpi" style="background: #FFFFFF; border: 1px solid #E4E9F2; border-radius: 14px; padding: 14px 16px">
+<div style="font-size: 12px; color: #5F6B85">Gross margin</div>
+<div style="font-size: 26px; font-weight: 700; letter-spacing: -.02em; margin-top: 4px">43.1%</div>
+<div style="font-size: 12px; color: #12805C; font-weight: 600; margin-top: 2px">▲ 2.1 pts YoY</div>
+</div>
+<div class="gp-kpi" style="background: #FFFFFF; border: 1px solid #E4E9F2; border-radius: 14px; padding: 14px 16px">
+<div style="font-size: 12px; color: #5F6B85">EBITDA (TTM)</div>
+<div style="font-size: 26px; font-weight: 700; letter-spacing: -.02em; margin-top: 4px">$1.02M</div>
+<div style="font-size: 12px; color: #4B5875; font-weight: 500; margin-top: 2px">12.1% margin</div>
+</div>
+<div class="gp-kpi" style="background: linear-gradient(135deg, #2350F0 0%, #12308F 100%); border-radius: 14px; padding: 14px 16px; color: #FFFFFF">
+<div style="font-size: 12px; color: #DCE6FF">Cash runway</div>
+<div style="font-size: 26px; font-weight: 700; letter-spacing: -.02em; margin-top: 4px">14.6 mo</div>
+<div style="font-size: 12px; color: #DCE6FF; margin-top: 2px">$1.38M cash on hand</div>
+</div>
+</div>
 
-    <nav class="footer-nav" aria-label="Footer navigation">
-      <a href="#services">Services</a>
-      <a href="#why">Why Us</a>
-      <a href="#about">About</a>
-      <a href="#pricing">Pricing</a>
-      <a href="#faq">FAQ</a>
-      <a href="#contact">Let's Talk</a>
-    </nav>
+<div style="display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); gap: 14px">
+<div style="background: #FFFFFF; border: 1px solid #E4E9F2; border-radius: 14px; padding: 16px 18px">
+<div style="display: flex; justify-content: space-between; align-items: baseline">
+<div style="font-size: 14px; font-weight: 700">Monthly revenue vs. forecast</div>
+<div style="display: flex; gap: 14px; font-size: 11px; color: #4B5875">
+<span style="display: flex; align-items: center; gap: 6px"><span style="width: 10px; height: 10px; border-radius: 3px; background: #2350F0"></span>Actual</span>
+<span style="display: flex; align-items: center; gap: 6px"><span style="width: 10px; height: 10px; border-radius: 3px; border: 1.5px dashed #2350F0; box-sizing: border-box"></span>Forecast</span>
+</div>
+</div>
+<div style="position: relative; height: 196px; margin-top: 14px">
+<div style="position: absolute; left: 0; right: 0; top: 0; border-top: 1px dashed #E4E9F2"></div>
+<div style="position: absolute; left: 0; right: 0; top: 65px; border-top: 1px dashed #E4E9F2"></div>
+<div style="position: absolute; left: 0; right: 0; top: 130px; border-top: 1px dashed #E4E9F2"></div>
+<div style="position: absolute; left: 0; right: 0; bottom: 0; border-top: 1px solid #D5DCE8"></div>
+<div style="position: absolute; inset: 0; display: flex; align-items: flex-end; justify-content: space-between; padding: 0 4px">
+<div class="gp-bar" style="width: 4.4%; height: 122px; background: #C9D7FF; border-radius: 5px 5px 0 0"></div>
+<div class="gp-bar" style="width: 4.4%; height: 126px; background: #C9D7FF; border-radius: 5px 5px 0 0"></div>
+<div class="gp-bar" style="width: 4.4%; height: 131px; background: #B5C8FF; border-radius: 5px 5px 0 0"></div>
+<div class="gp-bar" style="width: 4.4%; height: 128px; background: #B5C8FF; border-radius: 5px 5px 0 0"></div>
+<div class="gp-bar" style="width: 4.4%; height: 134px; background: #9DB6FF; border-radius: 5px 5px 0 0"></div>
+<div class="gp-bar" style="width: 4.4%; height: 138px; background: #9DB6FF; border-radius: 5px 5px 0 0"></div>
+<div class="gp-bar" style="width: 4.4%; height: 141px; background: #7C9CFF; border-radius: 5px 5px 0 0"></div>
+<div class="gp-bar" style="width: 4.4%; height: 146px; background: #7C9CFF; border-radius: 5px 5px 0 0"></div>
+<div class="gp-bar" style="width: 4.4%; height: 150px; background: #5B82FA; border-radius: 5px 5px 0 0"></div>
+<div class="gp-bar" style="width: 4.4%; height: 154px; background: #5B82FA; border-radius: 5px 5px 0 0"></div>
+<div class="gp-bar" style="width: 4.4%; height: 158px; background: #3A66F5; border-radius: 5px 5px 0 0"></div>
+<div class="gp-bar" style="width: 4.4%; height: 163px; background: #2350F0; border-radius: 5px 5px 0 0"></div>
+<div class="gp-bar" style="width: 4.4%; height: 166px; border: 1.5px dashed #2350F0; border-bottom: none; box-sizing: border-box; background: #F2F6FF; border-radius: 5px 5px 0 0"></div>
+<div class="gp-bar" style="width: 4.4%; height: 170px; border: 1.5px dashed #2350F0; border-bottom: none; box-sizing: border-box; background: #F2F6FF; border-radius: 5px 5px 0 0"></div>
+<div class="gp-bar" style="width: 4.4%; height: 175px; border: 1.5px dashed #2350F0; border-bottom: none; box-sizing: border-box; background: #F2F6FF; border-radius: 5px 5px 0 0"></div>
+</div>
+</div>
+<div style="display: flex; justify-content: space-between; padding: 8px 4px 0; font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: #5F6B85">
+<span>Oct</span><span>Nov</span><span>Dec</span><span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span><span>May</span><span>Jun</span><span>Jul</span><span>Aug</span><span>Sep</span><span>Oct</span><span>Nov</span><span>Dec</span>
+</div>
+</div>
 
-    <a href="mailto:jason@granitepointadvisory.com" class="footer-email">jason@granitepointadvisory.com</a>
+<div style="background: #FFFFFF; border: 1px solid #E4E9F2; border-radius: 14px; padding: 16px 18px; display: flex; flex-direction: column">
+<div style="font-size: 14px; font-weight: 700">13-week cash forecast</div>
+<div style="font-size: 12px; color: #5F6B85; margin-top: 2px">Ending balance, $000s</div>
+<svg viewBox="0 0 260 120" style="width: 100%; height: 130px; margin-top: 10px" role="img" aria-label="Illustrative 13-week cash forecast trending from 1,380 to 1,510 thousand dollars">
+<defs><linearGradient id="gpcash" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2350F0" stop-opacity=".22"></stop><stop offset="1" stop-color="#2350F0" stop-opacity="0"></stop></linearGradient></defs>
+<path d="M0 78 L21 84 L42 72 L63 80 L84 92 L105 82 L126 74 L147 66 L168 72 L189 58 L210 52 L231 56 L252 44 L252 120 L0 120 Z" fill="url(#gpcash)"></path>
+<polyline points="0,78 21,84 42,72 63,80 84,92 105,82 126,74 147,66 168,72 189,58 210,52 231,56 252,44" fill="none" stroke="#2350F0" stroke-width="2.5" stroke-linejoin="round"></polyline>
+<line x1="0" y1="100" x2="260" y2="100" stroke="#F0B866" stroke-dasharray="4 4" stroke-width="1.5"></line>
+<circle cx="252" cy="44" r="4.5" fill="#FFFFFF" stroke="#2350F0" stroke-width="2.5"></circle>
+</svg>
+<div style="display: flex; justify-content: space-between; font-size: 12px; margin-top: auto">
+<span style="color: #4B5875">Min. cash floor <span style="color: #8A4B08; font-weight: 600">$1.0M</span></span>
+<span style="font-weight: 700">$1.51M <span style="color: #5F6B85; font-weight: 500">wk 13</span></span>
+</div>
+</div>
+</div>
 
-    <p class="footer-copy">© 2026 Granite Point Advisory. All rights reserved.</p>
-  </div>
+<div style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 14px">
+<div style="background: #FFFFFF; border: 1px solid #E4E9F2; border-radius: 14px; padding: 16px 18px">
+<div style="font-size: 14px; font-weight: 700; margin-bottom: 12px">Gross margin by segment</div>
+<div style="display: flex; flex-direction: column; gap: 10px; font-size: 12px">
+<div style="display: grid; grid-template-columns: 80px minmax(0, 1fr) 44px; align-items: center; gap: 10px"><span style="color: #4B5875">Wholesale</span><div style="height: 8px; background: #EEF2F9; border-radius: 99px"><div style="width: 38%; height: 8px; background: #7C9CFF; border-radius: 99px"></div></div><span style="font-weight: 600; text-align: right">38%</span></div>
+<div style="display: grid; grid-template-columns: 80px minmax(0, 1fr) 44px; align-items: center; gap: 10px"><span style="color: #4B5875">Direct</span><div style="height: 8px; background: #EEF2F9; border-radius: 99px"><div style="width: 52%; height: 8px; background: #3A66F5; border-radius: 99px"></div></div><span style="font-weight: 600; text-align: right">52%</span></div>
+<div style="display: grid; grid-template-columns: 80px minmax(0, 1fr) 44px; align-items: center; gap: 10px"><span style="color: #4B5875">Services</span><div style="height: 8px; background: #EEF2F9; border-radius: 99px"><div style="width: 61%; height: 8px; background: #12308F; border-radius: 99px"></div></div><span style="font-weight: 600; text-align: right">61%</span></div>
+</div>
+</div>
+<div style="background: #FFFFFF; border: 1px solid #E4E9F2; border-radius: 14px; padding: 16px 18px">
+<div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 12px"><div style="font-size: 14px; font-weight: 700">AR aging</div><div style="font-size: 12px; color: #5F6B85">$685K open</div></div>
+<div style="display: flex; height: 12px; border-radius: 99px; overflow: hidden; gap: 2px">
+<div style="width: 60%; background: #2350F0"></div><div style="width: 25%; background: #7C9CFF"></div><div style="width: 11%; background: #F0B866"></div><div style="width: 4%; background: #C2410C"></div>
+</div>
+<div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; margin-top: 12px; font-size: 11px; color: #4B5875">
+<div>Current<div style="font-size: 13px; font-weight: 700; color: #0A1630">$412K</div></div>
+<div>31–60<div style="font-size: 13px; font-weight: 700; color: #0A1630">$168K</div></div>
+<div>61–90<div style="font-size: 13px; font-weight: 700; color: #0A1630">$74K</div></div>
+<div>90+<div style="font-size: 13px; font-weight: 700; color: #9A3412">$31K</div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div style="text-align: center; font-size: 12px; color: #5F6B85; margin-top: 4px">Sample client dashboard. All company names and figures are illustrative.</div>
+</div>
+</section>
+
+<section style="border-top: 1px solid #EEF1F6; border-bottom: 1px solid #EEF1F6; background: #FFFFFF">
+<div class="gp-stats-wrap" style="max-width: 1200px; margin: 0 auto; padding: 48px 32px; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 32px">
+<div><div class="gp-stat-num" style="font-size: 40px; font-weight: 800; letter-spacing: -.03em">10+ yrs</div><div style="font-size: 14px; color: #4B5875; margin-top: 4px">Investment banking, corporate development &amp; FP&amp;A</div></div>
+<div><div class="gp-stat-num" style="font-size: 40px; font-weight: 800; letter-spacing: -.03em">$1B+</div><div style="font-size: 14px; color: #4B5875; margin-top: 4px">In transactions advised on</div></div>
+<div><div class="gp-stat-num" style="font-size: 40px; font-weight: 800; letter-spacing: -.03em">$200M+</div><div style="font-size: 14px; color: #4B5875; margin-top: 4px">Capital raised</div></div>
+<div><div class="gp-stat-num" style="font-size: 40px; font-weight: 800; letter-spacing: -.03em">1 week</div><div style="font-size: 14px; color: #4B5875; margin-top: 4px">Typical time to fully onboarded</div></div>
+</div>
+</section>
+
+<section id="services" style="background: #FFFFFF">
+<div class="gp-wrap">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 440px), 1fr)); gap: 32px; align-items: end; margin-bottom: 56px">
+<div>
+<div style="font-size: 13px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: #2350F0">What we do</div>
+<h2 style="margin: 14px 0 0; font-size: clamp(34px, 4.2vw, 52px); line-height: 1.08; letter-spacing: -.03em; font-weight: 800">The full finance function, scaled to your stage.</h2>
+</div>
+<p style="margin: 0; font-size: 18px; line-height: 1.65; color: #4B5875">Start with clean books. Layer in forecasting, dashboards and strategic finance as you grow. One firm, one point of contact, no starting over.</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 20px">
+
+<div class="gp-card gp-sec-card" style="background: #FFFFFF; border: 1px solid #E4E9F2; border-radius: 20px; padding: 32px; box-shadow: 0 1px 2px rgba(16,40,110,.04)">
+<div style="width: 48px; height: 48px; border-radius: 14px; background: #EAF0FF; display: flex; align-items: center; justify-content: center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2350F0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 4v5c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V7z"></path><path d="M8.5 12.5l2.5 2.5 4.5-5"></path></svg></div>
+<h3 style="margin: 24px 0 10px; font-size: 21px; font-weight: 700; letter-spacing: -.01em">Fractional CFO &amp; strategic finance</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #4B5875">Senior financial leadership without the full-time hire — capital planning, board and investor reporting, pricing and growth decisions.</p>
+<div style="margin-top: 20px; padding-top: 18px; border-top: 1px solid #EEF1F6; display: flex; flex-direction: column; gap: 8px; font-size: 14px; color: #0A1630">
+<div>— Board &amp; investor reporting</div><div>— Fundraising &amp; lender support</div><div>— Unit economics &amp; pricing</div>
+</div>
+</div>
+
+<div class="gp-card gp-sec-card" style="background: #FFFFFF; border: 1px solid #E4E9F2; border-radius: 20px; padding: 32px; box-shadow: 0 1px 2px rgba(16,40,110,.04)">
+<div style="width: 48px; height: 48px; border-radius: 14px; background: #EAF0FF; display: flex; align-items: center; justify-content: center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2350F0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2.5"></rect><path d="M8 8h8M8 12h8M8 16h5"></path></svg></div>
+<h3 style="margin: 24px 0 10px; font-size: 21px; font-weight: 700; letter-spacing: -.01em">Bookkeeping &amp; monthly reporting</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #4B5875">Accurate, reconciled books and a fast monthly close — so your numbers are current and your CPA isn't cleaning up at year-end.</p>
+<div style="margin-top: 20px; padding-top: 18px; border-top: 1px solid #EEF1F6; display: flex; flex-direction: column; gap: 8px; font-size: 14px; color: #0A1630">
+<div>— Monthly close &amp; reconciliations</div><div>— Monthly financial statements</div><div>— Catch-up &amp; cleanup</div>
+</div>
+</div>
+
+<div class="gp-card gp-sec-card" style="background: #FFFFFF; border: 1px solid #E4E9F2; border-radius: 20px; padding: 32px; box-shadow: 0 1px 2px rgba(16,40,110,.04)">
+<div style="width: 48px; height: 48px; border-radius: 14px; background: #EAF0FF; display: flex; align-items: center; justify-content: center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2350F0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l5-5 4 3 8-8"></path><path d="M15 7h5v5"></path></svg></div>
+<h3 style="margin: 24px 0 10px; font-size: 21px; font-weight: 700; letter-spacing: -.01em">Cash flow forecasting &amp; planning</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #4B5875">Know your runway before it becomes a problem. Driver-based models and rolling forecasts tied to how your business actually operates.</p>
+<div style="margin-top: 20px; padding-top: 18px; border-top: 1px solid #EEF1F6; display: flex; flex-direction: column; gap: 8px; font-size: 14px; color: #0A1630">
+<div>— 13-week cash forecasts</div><div>— Annual budget &amp; operating model</div><div>— Scenario planning</div>
+</div>
+</div>
+
+<div class="gp-card gp-sec-card" style="background: #FFFFFF; border: 1px solid #E4E9F2; border-radius: 20px; padding: 32px; box-shadow: 0 1px 2px rgba(16,40,110,.04)">
+<div style="width: 48px; height: 48px; border-radius: 14px; background: #EAF0FF; display: flex; align-items: center; justify-content: center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2350F0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2.5"></rect><path d="M8 16v-4M12 16V9M16 16v-6"></path></svg></div>
+<h3 style="margin: 24px 0 10px; font-size: 21px; font-weight: 700; letter-spacing: -.01em">KPI dashboards &amp; business intelligence</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #4B5875">Live dashboards that show cash, margin and growth at a glance — built in Power BI on top of books you can trust.</p>
+<div style="margin-top: 20px; padding-top: 18px; border-top: 1px solid #EEF1F6; display: flex; flex-direction: column; gap: 8px; font-size: 14px; color: #0A1630">
+<div>— Power BI dashboards</div><div>— KPI design &amp; tracking</div><div>— Budget vs. actual reporting</div>
+</div>
+</div>
+
+<div class="gp-card gp-sec-card" style="background: #FFFFFF; border: 1px solid #E4E9F2; border-radius: 20px; padding: 32px; box-shadow: 0 1px 2px rgba(16,40,110,.04)">
+<div style="width: 48px; height: 48px; border-radius: 14px; background: #EAF0FF; display: flex; align-items: center; justify-content: center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2350F0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h11l-3-3M17 17H6l3 3"></path></svg></div>
+<h3 style="margin: 24px 0 10px; font-size: 21px; font-weight: 700; letter-spacing: -.01em">M&amp;A &amp; transaction advisory</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #4B5875">Buy-side and sell-side support from someone who has done it at institutional scale — diligence, valuation and exit readiness.</p>
+<div style="margin-top: 20px; padding-top: 18px; border-top: 1px solid #EEF1F6; display: flex; flex-direction: column; gap: 8px; font-size: 14px; color: #0A1630">
+<div>— Quality of earnings prep</div><div>— Valuation &amp; exit readiness</div><div>— Diligence support</div>
+</div>
+</div>
+
+<a class="gp-card gp-sec-card" href="#diagnostic" style="background: linear-gradient(160deg, #EAF0FF 0%, #F5F8FF 100%); border: 1px solid #C9D7FF; border-radius: 20px; padding: 32px; display: flex; flex-direction: column; color: #0A1630">
+<div style="font-size: 13px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: #2350F0">Not sure where to start?</div>
+<h3 style="margin: 14px 0 10px; font-size: 24px; font-weight: 800; letter-spacing: -.02em; line-height: 1.2">Begin with a complimentary CFO Diagnostic.</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #4B5875">A written review of your financial performance, risks and priorities — yours to keep either way.</p>
+<div style="margin-top: auto; padding-top: 24px; font-size: 15px; font-weight: 700; color: #2350F0">Request a diagnostic →</div>
+</a>
+
+</div>
+</div>
+</section>
+
+<section style="background: #0A1630; color: #FFFFFF">
+<div class="gp-wrap" style="padding-top: 104px; padding-bottom: 104px">
+<div style="max-width: 760px">
+<div style="font-size: 13px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: #8FB0FF">Why Granite Point</div>
+<h2 style="margin: 14px 0 0; font-size: clamp(34px, 4.2vw, 52px); line-height: 1.08; letter-spacing: -.03em; font-weight: 800">Wall Street rigor. Operator hands. A modern finance stack.</h2>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 20px; margin-top: 56px">
+<div class="gp-sec-card" style="border: 1px solid rgba(255,255,255,.12); border-radius: 20px; padding: 32px; background: rgba(255,255,255,.03)">
+<div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #8FB0FF">01</div>
+<h3 style="margin: 16px 0 10px; font-size: 21px; font-weight: 700">Institutional expertise</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.65; color: #C3CDE0">Investment banking, corporate M&amp;A and founder experience — the same analytical standard used on billion-dollar transactions, applied to your business.</p>
+</div>
+<div class="gp-sec-card" style="border: 1px solid rgba(255,255,255,.12); border-radius: 20px; padding: 32px; background: rgba(255,255,255,.03)">
+<div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #8FB0FF">02</div>
+<h3 style="margin: 16px 0 10px; font-size: 21px; font-weight: 700">Hands-on execution</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.65; color: #C3CDE0">We don't hand you a slide deck and leave. We close the books, build the model and sit in the room when the decision gets made.</p>
+</div>
+<div class="gp-sec-card" style="border: 1px solid rgba(255,255,255,.12); border-radius: 20px; padding: 32px; background: rgba(255,255,255,.03)">
+<div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #8FB0FF">03</div>
+<h3 style="margin: 16px 0 10px; font-size: 21px; font-weight: 700">Modern financial technology</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.65; color: #C3CDE0">Automated reconciliations, live Power BI dashboards and AI-assisted analysis mean faster closes and answers in days, not weeks.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="process" style="background: #F5F7FB">
+<div class="gp-wrap">
+<div style="text-align: center; max-width: 720px; margin: 0 auto 64px">
+<div style="font-size: 13px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: #2350F0">How it works</div>
+<h2 style="margin: 14px 0 16px; font-size: clamp(34px, 4.2vw, 52px); line-height: 1.08; letter-spacing: -.03em; font-weight: 800">From first call to clarity in weeks, not quarters.</h2>
+<p style="margin: 0; font-size: 18px; line-height: 1.65; color: #4B5875">A structured start and a lasting partnership — with flat-rate pricing at every step.</p>
+</div>
+<div style="position: relative; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: 20px">
+<div class="gp-card gp-sec-card" style="background: #FFFFFF; border: 1px solid #E4E9F2; border-radius: 20px; padding: 28px">
+<div style="display: flex; align-items: center; justify-content: space-between"><div style="width: 40px; height: 40px; border-radius: 12px; background: #2350F0; color: #FFFFFF; font-weight: 800; display: flex; align-items: center; justify-content: center">1</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #5F6B85">Week 0</div></div>
+<h3 style="margin: 22px 0 8px; font-size: 19px; font-weight: 700">Discovery call</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #4B5875">A straight 30-minute conversation about your business, your setup and what you actually need.</p>
+</div>
+<div class="gp-card gp-sec-card" style="background: #FFFFFF; border: 1px solid #E4E9F2; border-radius: 20px; padding: 28px">
+<div style="display: flex; align-items: center; justify-content: space-between"><div style="width: 40px; height: 40px; border-radius: 12px; background: #2350F0; color: #FFFFFF; font-weight: 800; display: flex; align-items: center; justify-content: center">2</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #5F6B85">Week 1</div></div>
+<h3 style="margin: 22px 0 8px; font-size: 19px; font-weight: 700">CFO Diagnostic</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #4B5875">We review your financials and deliver a written assessment of risks, opportunities and priorities.</p>
+</div>
+<div class="gp-card gp-sec-card" style="background: #FFFFFF; border: 1px solid #E4E9F2; border-radius: 20px; padding: 28px">
+<div style="display: flex; align-items: center; justify-content: space-between"><div style="width: 40px; height: 40px; border-radius: 12px; background: #2350F0; color: #FFFFFF; font-weight: 800; display: flex; align-items: center; justify-content: center">3</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #5F6B85">Week 2</div></div>
+<h3 style="margin: 22px 0 8px; font-size: 19px; font-weight: 700">Proposal &amp; onboarding</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #4B5875">A clear flat-rate scope. We connect to your systems and get organized — typically within a week.</p>
+</div>
+<div class="gp-card gp-sec-card" style="background: #FFFFFF; border: 1px solid #E4E9F2; border-radius: 20px; padding: 28px">
+<div style="display: flex; align-items: center; justify-content: space-between"><div style="width: 40px; height: 40px; border-radius: 12px; background: #0A1630; color: #FFFFFF; font-weight: 800; display: flex; align-items: center; justify-content: center">4</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #5F6B85">Ongoing</div></div>
+<h3 style="margin: 22px 0 8px; font-size: 19px; font-weight: 700">CFO partnership</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #4B5875">Monthly close, dashboards, forecasts and a standing strategy call with a CFO who knows your business.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="about" style="background: #FFFFFF">
+<div class="gp-wrap gp-about-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: 64px; align-items: center">
+<div style="position: relative">
+<div style="aspect-ratio: 4 / 5; border-radius: 24px; overflow: hidden; border: 1px solid #C9D7FF; background: linear-gradient(160deg, #EAF0FF 0%, #DCE6FF 100%)">
+<img src="jason-headshot.jpg" alt="Jason Henris, Founder and Principal of Granite Point Advisory" style="width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block">
+</div>
+<div class="gp-about-badge" style="position: absolute; right: -16px; bottom: 32px; background: #FFFFFF; border: 1px solid #E4E9F2; border-radius: 16px; padding: 16px 20px; box-shadow: 0 20px 40px rgba(16,40,110,.12)">
+<div style="font-size: 12px; color: #5F6B85">Founder &amp; Principal</div>
+<div style="font-size: 16px; font-weight: 700; margin-top: 2px">Jason Henris</div>
+</div>
+</div>
+<div>
+<div style="font-size: 13px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: #2350F0">About Granite Point</div>
+<h2 style="margin: 14px 0 24px; font-size: clamp(34px, 4.2vw, 52px); line-height: 1.08; letter-spacing: -.03em; font-weight: 800">A boutique firm with an institutional bench.</h2>
+<p style="margin: 0 0 18px; font-size: 17px; line-height: 1.7; color: #4B5875">I started Granite Point after nearly a decade helping companies make high-stakes financial decisions — in investment banking, corporate M&amp;A and as a founder who raised capital and built a business from scratch.</p>
+<p style="margin: 0 0 32px; font-size: 17px; line-height: 1.7; color: #4B5875">The pattern was always the same: great operators running on instinct because they lacked clear, reliable numbers. Granite Point gives growing businesses the finance function they'd build if they could hire a CFO, a controller and an analyst — at a fraction of the cost.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 10px">
+<span style="font-size: 14px; font-weight: 600; padding: 9px 14px; border-radius: 999px; background: #F5F7FB; border: 1px solid #E4E9F2">Investment banking</span>
+<span style="font-size: 14px; font-weight: 600; padding: 9px 14px; border-radius: 999px; background: #F5F7FB; border: 1px solid #E4E9F2">Corporate M&amp;A</span>
+<span style="font-size: 14px; font-weight: 600; padding: 9px 14px; border-radius: 999px; background: #F5F7FB; border: 1px solid #E4E9F2">FP&amp;A</span>
+<span style="font-size: 14px; font-weight: 600; padding: 9px 14px; border-radius: 999px; background: #F5F7FB; border: 1px solid #E4E9F2">Founder &amp; operator</span>
+</div>
+</div>
+</div>
+</section>
+
+<section id="diagnostic" style="background: #FFFFFF">
+<div class="gp-diag-wrap" style="max-width: 1200px; margin: 0 auto; padding: 0 32px 112px">
+<div class="gp-diag-card" style="position: relative; overflow: hidden; border-radius: 28px; background: radial-gradient(700px 400px at 90% 10%, rgba(91,140,255,.55) 0%, rgba(91,140,255,0) 70%), linear-gradient(135deg, #12308F 0%, #2350F0 100%); color: #FFFFFF; padding: 72px 64px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr)); gap: 56px; align-items: center">
+<div>
+<div style="display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: #FFFFFF; background: rgba(255,255,255,.14); border: 1px solid rgba(255,255,255,.25); padding: 6px 12px; border-radius: 999px">Complimentary · No obligation</div>
+<h2 style="margin: 20px 0 16px; font-size: clamp(34px, 4vw, 50px); line-height: 1.08; letter-spacing: -.03em; font-weight: 800">See your business the way a CFO does.</h2>
+<p style="margin: 0 0 28px; font-size: 18px; line-height: 1.65; color: #DCE6FF">A written, CFO-level review of your financial performance — delivered within 5 business days, and yours to keep whether or not we work together.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 12px">
+<a class="gp-btn" href="#contact" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 26px; border-radius: 12px; background: #FFFFFF; color: #12308F; font-size: 16px; font-weight: 700">Request your diagnostic</a>
+<a href="#contact" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 22px; border-radius: 12px; border: 1px solid rgba(255,255,255,.4); color: #FFFFFF; font-size: 16px; font-weight: 600">Book a 30-min call</a>
+</div>
+<div style="font-size: 13px; color: #C3D3FF; margin-top: 18px">Read-only access to your accounting system · NDA provided</div>
+</div>
+<div style="background: #FFFFFF; color: #0A1630; border-radius: 20px; padding: 28px; box-shadow: 0 30px 60px rgba(5,15,60,.35)">
+<div style="display: flex; justify-content: space-between; align-items: center; padding-bottom: 16px; border-bottom: 1px solid #EEF1F6">
+<div style="font-size: 15px; font-weight: 700">CFO Diagnostic Report</div>
+<div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #5F6B85">SAMPLE</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px; padding-top: 18px">
+<div style="display: flex; gap: 14px"><div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; font-weight: 500; color: #2350F0; width: 24px">01</div><div><div style="font-size: 15px; font-weight: 700">Performance &amp; trends</div><div style="font-size: 14px; color: #4B5875; line-height: 1.5; margin-top: 2px">36 months of revenue, margin and cash, normalized and benchmarked.</div></div></div>
+<div style="display: flex; gap: 14px"><div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; font-weight: 500; color: #2350F0; width: 24px">02</div><div><div style="font-size: 15px; font-weight: 700">Quantified opportunities</div><div style="font-size: 14px; color: #4B5875; line-height: 1.5; margin-top: 2px">Where cash, margin and working capital are leaking — in dollars.</div></div></div>
+<div style="display: flex; gap: 14px"><div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; font-weight: 500; color: #2350F0; width: 24px">03</div><div><div style="font-size: 15px; font-weight: 700">Executive CFO assessment</div><div style="font-size: 14px; color: #4B5875; line-height: 1.5; margin-top: 2px">Key observations and a 30 / 60 / 90-day plan for where to focus first.</div></div></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="pricing" style="background: #F5F7FB; border-top: 1px solid #E4E9F2">
+<div class="gp-wrap">
+<div style="text-align: center; max-width: 720px; margin: 0 auto 56px">
+<div style="font-size: 13px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: #2350F0">Pricing</div>
+<h2 style="margin: 14px 0 16px; font-size: clamp(34px, 4.2vw, 52px); line-height: 1.08; letter-spacing: -.03em; font-weight: 800">Transparent, flat-rate pricing.</h2>
+<p style="margin: 0; font-size: 18px; line-height: 1.65; color: #4B5875">No hourly billing, no surprise invoices. All plans include a dedicated point of contact and monthly financial statements.</p>
+</div>
+
+<div class="gp-price-grid">
+
+<div class="gp-price">
+<h3>Essentials</h3>
+<p class="gp-price-start">Starting at</p>
+<div class="gp-price-amt">$500<span>/mo</span></div>
+<p class="gp-price-desc">For early-stage businesses and owner-operators who need clean, reliable books.</p>
+<ul class="gp-price-list">
+<li>Monthly bookkeeping</li>
+<li>Bank &amp; credit card reconciliation</li>
+<li>Monthly financial statements</li>
+<li>Annual 1099 preparation</li>
+<li>Dedicated point of contact</li>
+</ul>
+<a href="#contact" class="gp-price-cta">Get started</a>
+</div>
+
+<div class="gp-price is-featured">
+<div class="gp-price-badge">Most popular</div>
+<h3>Growth</h3>
+<p class="gp-price-start">Starting at</p>
+<div class="gp-price-amt">$1,200<span>/mo</span></div>
+<p class="gp-price-desc">Bookkeeping + payroll + light CFO advisory for businesses actively scaling operations.</p>
+<ul class="gp-price-list">
+<li>Everything in Essentials</li>
+<li>Full-service payroll processing</li>
+<li>Quarterly cash flow review</li>
+<li>KPI dashboard &amp; reporting</li>
+<li>Monthly strategy call</li>
+</ul>
+<a href="#contact" class="gp-price-cta">Get started</a>
+</div>
+
+<div class="gp-price">
+<h3>Fractional CFO</h3>
+<p class="gp-price-start">Starting at</p>
+<div class="gp-price-amt">$2,500<span>/mo</span></div>
+<p class="gp-price-desc">Full-stack financial leadership for companies preparing to scale, raise capital, or transact.</p>
+<ul class="gp-price-list">
+<li>Everything in Growth</li>
+<li>Financial modeling &amp; forecasting</li>
+<li>Budget development &amp; oversight</li>
+<li>Investor &amp; board reporting</li>
+<li>Weekly CFO availability</li>
+</ul>
+<a href="#contact" class="gp-price-cta">Book a call</a>
+</div>
+
+</div>
+<p style="margin: 32px 0 0; text-align: center; font-size: 15px; color: #5F6B85">All pricing is customized — <a href="#contact" style="font-weight: 600">book a call</a> for a personalized quote based on your business.</p>
+</div>
+</section>
+
+<section id="faq" style="background: #FFFFFF">
+<div class="gp-wrap">
+<div style="text-align: center; max-width: 720px; margin: 0 auto 56px">
+<div style="font-size: 13px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: #2350F0">FAQ</div>
+<h2 style="margin: 14px 0 16px; font-size: clamp(34px, 4.2vw, 52px); line-height: 1.08; letter-spacing: -.03em; font-weight: 800">Common questions, honest answers.</h2>
+<p style="margin: 0; font-size: 18px; line-height: 1.65; color: #4B5875">Everything you need to know before booking a call. Don't see your question? <a href="#contact" style="font-weight: 600">Reach out directly.</a></p>
+</div>
+
+<div class="gp-faq">
+
+<div class="gp-faq-item">
+<button class="gp-faq-q" onclick="gpToggleFaq(this)" aria-expanded="false">
+<span>What's the difference between bookkeeping and a Fractional CFO?</span>
+<svg class="gp-faq-chev" viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+</button>
+<div class="gp-faq-a" role="region">
+<p><strong>Bookkeeping</strong> is the foundation — keeping your records accurate, reconciling accounts, categorizing transactions, and producing monthly financials. A <strong>Fractional CFO</strong> is the strategic layer on top: interpreting those numbers, building forecasts, identifying risks and opportunities, and helping you make better high-level decisions. Many clients start with bookkeeping and layer in CFO services as their business grows.</p>
+</div>
+</div>
+
+<div class="gp-faq-item">
+<button class="gp-faq-q" onclick="gpToggleFaq(this)" aria-expanded="false">
+<span>How is pricing determined?</span>
+<svg class="gp-faq-chev" viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+</button>
+<div class="gp-faq-a" role="region">
+<p>Pricing is based on your transaction volume, number of accounts, and which services you need. We provide <strong>flat monthly rates</strong> — no hourly billing, no surprise invoices. After a free discovery call, you'll receive a clear proposal tailored to your business before you commit to anything.</p>
+</div>
+</div>
+
+<div class="gp-faq-item">
+<button class="gp-faq-q" onclick="gpToggleFaq(this)" aria-expanded="false">
+<span>How far behind can my books be?</span>
+<svg class="gp-faq-chev" viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+</button>
+<div class="gp-faq-a" role="region">
+<p>It doesn't matter how far behind you are — whether it's a few months or several years, this is one of the most common situations we step into. We offer <strong>catch-up and cleanup bookkeeping</strong> to get your records current before transitioning to ongoing service. We'll assess the scope during your discovery call and give you a transparent quote for the catch-up work upfront.</p>
+</div>
+</div>
+
+<div class="gp-faq-item">
+<button class="gp-faq-q" onclick="gpToggleFaq(this)" aria-expanded="false">
+<span>Can you clean up prior years?</span>
+<svg class="gp-faq-chev" viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+</button>
+<div class="gp-faq-a" role="region">
+<p>Yes. We regularly rebuild and reconcile <strong>prior-year books</strong> — re-categorizing transactions, fixing reconciliation gaps, and producing clean, tax-ready financials. Once your historical records are accurate, we transition you onto a steady monthly process so you stay current going forward.</p>
+</div>
+</div>
+
+<div class="gp-faq-item">
+<button class="gp-faq-q" onclick="gpToggleFaq(this)" aria-expanded="false">
+<span>Do you work with my CPA?</span>
+<svg class="gp-faq-chev" viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+</button>
+<div class="gp-faq-a" role="region">
+<p>Absolutely — and we encourage it. We <strong>complement your CPA</strong>, not replace them. We handle day-to-day financial operations and produce clean records that make tax season smoother and less expensive for both you and your preparer. We coordinate directly with your CPA as needed throughout the year.</p>
+</div>
+</div>
+
+<div class="gp-faq-item">
+<button class="gp-faq-q" onclick="gpToggleFaq(this)" aria-expanded="false">
+<span>What information do you need from me?</span>
+<svg class="gp-faq-chev" viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+</button>
+<div class="gp-faq-a" role="region">
+<p>To get started, we typically need <strong>view access to your bank and credit card accounts, your accounting system, and payroll</strong> (if applicable), along with a quick conversation about how your business operates. We guide you through exactly what's needed during onboarding — the process is designed to require minimal lift from you.</p>
+</div>
+</div>
+
+<div class="gp-faq-item">
+<button class="gp-faq-q" onclick="gpToggleFaq(this)" aria-expanded="false">
+<span>How often will we communicate?</span>
+<svg class="gp-faq-chev" viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+</button>
+<div class="gp-faq-a" role="region">
+<p>At minimum, you'll receive <strong>monthly financial statements and a summary</strong> from your dedicated contact. Clients on Growth and Fractional CFO plans also receive a monthly strategy call. Beyond scheduled touchpoints, we're accessible by email throughout the month and respond within one business day — usually faster.</p>
+</div>
+</div>
+
+<div class="gp-faq-item">
+<button class="gp-faq-q" onclick="gpToggleFaq(this)" aria-expanded="false">
+<span>How long does onboarding take?</span>
+<svg class="gp-faq-chev" viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+</button>
+<div class="gp-faq-a" role="region">
+<p>Once you sign on, we connect to your accounting system, conduct a thorough review of your books, and get everything organized — typically within the first week. You'll have a dedicated contact from day one and a clear picture of your financials before the end of your first month. The process is designed to require <strong>minimal lift from you</strong>.</p>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<section id="contact" style="background: #F5F7FB; border-top: 1px solid #E4E9F2">
+<div class="gp-wrap">
+<div style="max-width: 720px; margin-bottom: 48px">
+<div style="font-size: 13px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: #2350F0">Get in touch</div>
+<h2 style="margin: 14px 0 16px; font-size: clamp(34px, 4.2vw, 52px); line-height: 1.08; letter-spacing: -.03em; font-weight: 800">Let's have a real conversation.</h2>
+<p style="margin: 0; font-size: 18px; line-height: 1.65; color: #4B5875">Book a free 30-minute call — no pitch, no pressure. We'll talk through where you are, what you need, and whether we're the right fit.</p>
+</div>
+
+<div class="gp-book-grid">
+<div class="gp-cal">
+<div class="calendly-inline-widget"
+     data-url="https://calendly.com/jason-granitepointadvisory/30min?hide_event_type_details=1&hide_gdpr_banner=1&primary_color=2350f0"
+     style="min-width:320px;height:700px;"></div>
+<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+</div>
+
+<div class="gp-book-side">
+
+<div class="gp-book-card">
+<h3>Contact info</h3>
+<div class="gp-crow">
+<div class="gp-cicon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></div>
+<div class="gp-ctext"><strong>Email</strong><span>jason@granitepointadvisory.com</span></div>
+</div>
+<div class="gp-crow">
+<div class="gp-cicon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.35 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.77a16 16 0 0 0 6.29 6.29l.87-.87a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></div>
+<div class="gp-ctext"><strong>Phone</strong><span>516-662-4527</span></div>
+</div>
+<div class="gp-crow">
+<div class="gp-cicon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></div>
+<div class="gp-ctext"><strong>Hours</strong><span>Mon – Fri, 8am – 6pm EST</span></div>
+</div>
+<div class="gp-crow">
+<div class="gp-cicon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg></div>
+<div class="gp-ctext"><strong>Location</strong><span>Greater Boston · Serving clients nationwide</span></div>
+</div>
+</div>
+
+<div class="gp-book-card">
+<h3>What to expect</h3>
+<ul class="gp-expect">
+<li>A relaxed conversation — no sales pitch</li>
+<li>We'll assess your current financial setup</li>
+<li>You'll walk away with clear next steps</li>
+<li>Transparent pricing, no hidden fees</li>
+<li>Response within one business day</li>
+</ul>
+</div>
+
+</div>
+</div>
+</div>
+</section>
+
+<footer style="background: #F5F7FB; border-top: 1px solid #E4E9F2">
+<div class="gp-foot-wrap" style="max-width: 1200px; margin: 0 auto; padding: 72px 32px 40px">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px">
+<div style="grid-column: span 1">
+<div style="display: flex; align-items: center; gap: 10px">
+<svg width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><path d="M3 27 L13 9 L19 19 L22 14 L29 27 Z" fill="#2350F0"></path><path d="M13 9 L19 19 L16 27 L3 27 Z" fill="#12308F"></path></svg>
+<span style="font-weight: 800; font-size: 16px">Granite Point Advisory</span>
+</div>
+<p style="margin: 16px 0 0; font-size: 14px; line-height: 1.65; color: #4B5875">Fractional CFO, reporting and transaction advisory for growing businesses.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px; font-size: 14px">
+<div style="font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: #5F6B85; margin-bottom: 4px">Services</div>
+<a href="#services" style="color: #0A1630">Fractional CFO</a><a href="#services" style="color: #0A1630">Bookkeeping &amp; reporting</a><a href="#services" style="color: #0A1630">Forecasting &amp; planning</a><a href="#services" style="color: #0A1630">Dashboards &amp; BI</a><a href="#services" style="color: #0A1630">M&amp;A advisory</a>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px; font-size: 14px">
+<div style="font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: #5F6B85; margin-bottom: 4px">Company</div>
+<a href="#about" style="color: #0A1630">About</a><a href="#process" style="color: #0A1630">How it works</a><a href="#diagnostic" style="color: #0A1630">CFO Diagnostic</a><a href="#pricing" style="color: #0A1630">Pricing</a><a href="#faq" style="color: #0A1630">FAQ</a>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px; font-size: 14px">
+<div style="font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: #5F6B85; margin-bottom: 4px">Contact</div>
+<a href="mailto:jason@granitepointadvisory.com">jason@granitepointadvisory.com</a>
+<a href="tel:5166624527" style="color: #0A1630">516-662-4527</a>
+<span style="color: #4B5875">Greater Boston · Serving clients nationwide</span>
+</div>
+</div>
+<div style="margin-top: 56px; padding-top: 24px; border-top: 1px solid #E4E9F2; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; font-size: 13px; color: #5F6B85">
+<span>© 2026 Granite Point Advisory. All rights reserved.</span>
+<span>Dashboard figures shown on this page are illustrative.</span>
+</div>
+</div>
 </footer>
 
+</div>
+
 <script>
-  // Mobile nav toggle
-  function toggleNav() {
-    const links = document.getElementById('navLinks');
-    const hamburger = document.getElementById('hamburger');
-    links.classList.toggle('open');
-    hamburger.classList.toggle('open');
-  }
-
-  function closeNav() {
-    document.getElementById('navLinks').classList.remove('open');
-    document.getElementById('hamburger').classList.remove('open');
-  }
-
-  document.addEventListener('click', function(e) {
-    const nav = document.querySelector('nav');
-    if (!nav.contains(e.target)) closeNav();
+function gpToggleFaq(btn){
+  var item = btn.parentElement;
+  var isOpen = item.classList.contains('is-open');
+  document.querySelectorAll('.gp-faq-item').forEach(function(i){
+    i.classList.remove('is-open');
+    i.querySelector('.gp-faq-a').style.maxHeight = null;
+    i.querySelector('.gp-faq-q').setAttribute('aria-expanded','false');
   });
-
-  // FAQ accordion
-  function toggleFaq(btn) {
-    const item = btn.parentElement;
-    const isOpen = item.classList.contains('open');
-    document.querySelectorAll('.faq-item').forEach(i => {
-      i.classList.remove('open');
-      i.querySelector('.faq-a').style.maxHeight = null;
-      i.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
-    });
-    if (!isOpen) {
-      item.classList.add('open');
-      const panel = item.querySelector('.faq-a');
-      panel.style.maxHeight = panel.scrollHeight + 'px';
-      btn.setAttribute('aria-expanded', 'true');
-    }
+  if(!isOpen){
+    item.classList.add('is-open');
+    var panel = item.querySelector('.gp-faq-a');
+    panel.style.maxHeight = panel.scrollHeight + 'px';
+    btn.setAttribute('aria-expanded','true');
   }
-
-  // Hide mobile bar when contact section is visible
-  const mobileBar = document.getElementById('mobileBookBar');
-  const contactSection = document.getElementById('contact');
-  if (mobileBar && contactSection) {
-    new IntersectionObserver(entries => {
-      mobileBar.style.display = entries[0].isIntersecting ? 'none' : '';
-    }, { threshold: 0.15 }).observe(contactSection);
-  }
-
-  // Smooth scroll
-  document.querySelectorAll('a[href^="#"]').forEach(a => {
-    a.addEventListener('click', e => {
-      const target = document.querySelector(a.getAttribute('href'));
-      if (target) {
-        e.preventDefault();
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-    });
-  });
+}
 </script>
 
 </body>

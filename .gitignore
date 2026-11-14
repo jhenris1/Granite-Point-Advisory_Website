@@ -1,0 +1,8 @@
+# Plain copy of the pre-redesign site — kept locally as a restore point.
+# Never commit or publish: committing it would expose the old site at
+# granitepointadvisory.com/_original-site-backup/
+_original-site-backup/
+
+# Working documents for the redesign handoff (not part of the published site)
+CLAUDE-CODE-PROMPT.md
+gpa-redesign-reference.html
