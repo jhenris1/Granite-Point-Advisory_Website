@@ -642,7 +642,7 @@ Free CFO Diagnostic — it starts with a 30-minute call
 <li style="display: flex; gap: 14px; align-items: flex-start"><span style="flex-shrink: 0; width: 28px; height: 28px; border-radius: 8px; background: rgba(255,255,255,.16); border: 1px solid rgba(255,255,255,.28); font-family: 'IBM Plex Mono', monospace; font-size: 13px; font-weight: 500; display: flex; align-items: center; justify-content: center">2</span><span style="font-size: 15px; line-height: 1.5; color: #DCE6FF"><strong style="color: #FFFFFF; font-weight: 700">Share read-only access.</strong> To your accounting system, with an NDA in place.</span></li>
 <li style="display: flex; gap: 14px; align-items: flex-start"><span style="flex-shrink: 0; width: 28px; height: 28px; border-radius: 8px; background: rgba(255,255,255,.16); border: 1px solid rgba(255,255,255,.28); font-family: 'IBM Plex Mono', monospace; font-size: 13px; font-weight: 500; display: flex; align-items: center; justify-content: center">3</span><span style="font-size: 15px; line-height: 1.5; color: #DCE6FF"><strong style="color: #FFFFFF; font-weight: 700">Get your diagnostic.</strong> A written review delivered within 5 business days.</span></li>
 </ol>
-<a class="gp-btn" href="#contact" style="display: inline-flex; align-items: center; gap: 10px; min-height: 52px; padding: 0 26px; border-radius: 12px; background: #FFFFFF; color: #12308F; font-size: 16px; font-weight: 700">Book your diagnostic call
+<a class="gp-btn" href="https://calendly.com/jason-granitepointadvisory/30min" target="_blank" rel="noopener" data-calendly-popup style="display: inline-flex; align-items: center; gap: 10px; min-height: 52px; padding: 0 26px; border-radius: 12px; background: #FFFFFF; color: #12308F; font-size: 16px; font-weight: 700">Book your diagnostic call
 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
 </div>
 <div style="background: #FFFFFF; color: #0A1630; border-radius: 20px; padding: 28px; box-shadow: 0 30px 60px rgba(5,15,60,.35)">
@@ -964,14 +964,45 @@ function gpToggleFaq(btn){
 
 /* load the Calendly scheduler only when it is needed; hide the mobile bar once the scheduler is on screen */
 (function(){
-  var loaded = false;
+  var CAL_URL = 'https://calendly.com/jason-granitepointadvisory/30min?hide_gdpr_banner=1&primary_color=2350f0';
+  var ready = null;
   function load(){
-    if(loaded) return; loaded = true;
-    var s = document.createElement('script');
-    s.src = 'https://assets.calendly.com/assets/external/widget.js';
-    s.async = true;
-    document.body.appendChild(s);
+    if(ready) return ready;
+    ready = new Promise(function(resolve, reject){
+      var css = document.createElement('link');
+      css.rel = 'stylesheet';
+      css.href = 'https://assets.calendly.com/assets/external/widget.css';
+      document.head.appendChild(css);
+      var s = document.createElement('script');
+      s.src = 'https://assets.calendly.com/assets/external/widget.js';
+      s.async = true;
+      s.onload = function(){ window.Calendly ? resolve() : reject(); };
+      s.onerror = reject;
+      document.body.appendChild(s);
+    });
+    ready.catch(function(){});
+    return ready;
   }
+
+  /* "Book" buttons marked data-calendly-popup open the scheduler in an overlay;
+     if Calendly is blocked or slow, they fall through to the Calendly page itself */
+  document.querySelectorAll('a[data-calendly-popup]').forEach(function(a){
+    a.addEventListener('click', function(e){
+      if(e.metaKey || e.ctrlKey || e.shiftKey || e.button !== 0) return;
+      e.preventDefault();
+      var done = false;
+      var fallback = setTimeout(function(){ if(!done){ done = true; window.location.href = a.href; } }, 4000);
+      load().then(function(){
+        if(done) return;
+        done = true; clearTimeout(fallback);
+        Calendly.initPopupWidget({ url: CAL_URL });
+      }, function(){
+        if(done) return;
+        done = true; clearTimeout(fallback);
+        window.location.href = a.href;
+      });
+    });
+  });
   var sec = document.getElementById('contact'), bar = document.getElementById('gpMbar');
   if('IntersectionObserver' in window && sec){
     var near = new IntersectionObserver(function(en){
